@@ -1,0 +1,68 @@
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\source\repos\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Windsor\PrecutMp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_23Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources

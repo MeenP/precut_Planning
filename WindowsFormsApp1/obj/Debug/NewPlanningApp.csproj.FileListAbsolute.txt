@@ -1,0 +1,537 @@
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_29Aug2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Test copyLinkQV\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\XXX\Excel2SQL_02Sep2022_TestServer_code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\App Updated\Planing2022Dec27 - Upper\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\AppPrecut\@App Updated\2 Planing2023Jan10 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Jan12 - QRextended\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\Coding\2_Planing2023Mar03 - QRextended - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 04Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 26Apr2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 03May2022\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 16June2022 - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 01Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\SCG\Desktop\Code05Sep\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\2_Planing 13Sep2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 3Oct2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 19Dec2023\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 05Jan2024\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenphup\Desktop\@codeUpdat09Jan2024\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csprojAssemblyReference.cache
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
