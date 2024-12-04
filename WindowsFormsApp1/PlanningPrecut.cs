@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +15,55 @@ namespace WindowsFormsApp1
 {
     public partial class PlanningPrecut : Form
     {
+
         public PlanningPrecut()
         {
             InitializeComponent();
-            
+            //Grouping panel control
+
+            // testing
+            //Center.closeConnection();
+            //Center.Location = 2;
+            //Center.openConnection_LinkQvDB();
+            //label_Identity.Text = Center.Identity;
+
         }
 
-        private void btSearch_Click(object sender, EventArgs e)
+        private void PlanningPrecut_Load(object sender, EventArgs e)
+        {
+            btn_sOperation.Visible = false;
+            buttonTestOrderDetail.Visible = true;
+            cb_SelectQRcode.Enabled = false;
+
+            if (Center.Identity == "")
+            {
+                label_server.Text = "Line1 โรงล่าง Default";
+            }
+            else
+            {
+                label_server.Text = Center.Identity;
+            }
+            initialCB_LinkQV();
+            initialCB_CuttingLists();
+            initialCB_SelectQRcode();
+        }
+
+        private void UpdateProgressLabel(Label label, string message)
+        {
+            if (label.InvokeRequired)
+            {
+                label.BeginInvoke((MethodInvoker)(() =>
+                {
+                    label.Text = message;
+                }));
+            }
+            else
+            {
+                label.Text = message;
+            }
+        }
+
+        private async void btSearch_Click(object sender, EventArgs e)
         {
 
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
@@ -36,7 +80,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            var _p1 = searchBatchInDb(_inbatch, false); 
+            var _p1 = await searchBatchInDbAsync(_inbatch, false);
 
             string _msgs = "";
 
@@ -44,24 +88,22 @@ namespace WindowsFormsApp1
             {
                 int _d = _p1.batch.IndexOf(_p0.batch[i]);
                 string _plant = (_d == -1) ? "Nodata" : (_p1.feb2[_d]) ? "Pre - Cut" : "Feb1";
-                            // (Condition) ?   Yes do : No do (Condition) ? Yes Do : No Do 
-               // string _plant = (_d == -1) ? "Nodata" : (false) ? "Pre - Cut" : "Feb1"; 
+                // (Condition) ?   Yes do : No do (Condition) ? Yes Do : No Do 
+                // string _plant = (_d == -1) ? "Nodata" : (false) ? "Pre - Cut" : "Feb1"; 
                 _msgs = _msgs + $"Batch:{_p0.batch[i]} => {_plant}" + Environment.NewLine;
             }
             MessageBox.Show(_msgs);
-
-
         }
 
         private bool NoMissingTable(string batches)
         {
-            List<string> Exist1 = new List<string>() {};
+            List<string> Exist1 = new List<string>() { };
             List<string> Exist2 = new List<string>() { };
             string batch1 = batches.Replace("(", string.Empty);
             string batch2 = batch1.Replace(")", string.Empty);
             string[] _batch = batch2.Split(',');
-            
-            
+
+
             //checked Cut Test
             string q1 = "SELECT [ProductionLot] FROM [Opt_Cut_test_Table]";
             string q2 = "";
@@ -69,12 +111,12 @@ namespace WindowsFormsApp1
             {
                 q2 = $"where [ProductionLot] = {b}";
                 string qAll = q1 + q2;
-          
+
                 Center.sql = qAll;
                 Center.cmd.CommandText = Center.sql;
                 Center.openConnection_LinkQvDB();
                 Center.data_reader = Center.cmd.ExecuteReader();
-             
+
                 while (Center.data_reader.Read())
                 {
 
@@ -89,8 +131,8 @@ namespace WindowsFormsApp1
 
             }
 
-             q1 = "SELECT [ProductionLot] FROM [Profile_Operation_Table]";
-             q2 = "";
+            q1 = "SELECT [ProductionLot] FROM [Profile_Operation_Table]";
+            q2 = "";
             foreach (var b in _batch)
             {
                 q2 = $"where [ProductionLot] = {b}";
@@ -117,13 +159,13 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Missing Opt_Cut_test_Table");
                 return false;
-                
+
             }
             else if (Exist2.Count == 0)
             {
                 MessageBox.Show("Missing Profile_Operation_Table");
                 return false;
-              
+
             }
             else
             {
@@ -134,6 +176,10 @@ namespace WindowsFormsApp1
 
         private async void btUpdateBatch_Click(object sender, EventArgs e)
         {
+
+            progressBar1.Style = ProgressBarStyle.Marquee;
+            progressBar1.Visible = true;
+
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
             {
                 MessageBox.Show("ใส่ bath ที่ต้องการจะ Search !!");
@@ -152,6 +198,7 @@ namespace WindowsFormsApp1
             if (!_p0.complete)
             {
                 MessageBox.Show(_p0.error);
+                progressBar1.Visible = false;
                 return;
             }
             DialogResult _r2 = MessageBox.Show($"ต้องการที่จะเพิ่ม Batch ในโรงผลิต {_plant} ใช่หรือไม่", "Waring",
@@ -159,304 +206,327 @@ namespace WindowsFormsApp1
             if (_r2 == DialogResult.No)
                 return;
             // #1 
-            var _p1 = updateSomeBatch(_inbatch, _plant);
-
-            if (!_p1.complete)
+            var result = await updateSomeBatchAsync(_inbatch, _plant);
+            if (!result.complete)
             {
-                MessageBox.Show(_p1.error);
+                Console.WriteLine($"Error: {result.error}");
+                progressBar1.Visible = false;
+            }
+            else
+            {
+                Console.WriteLine("Batch update completed successfully.");
+            }
+
+            if (!result.complete)
+            {
+                MessageBox.Show(result.error);
+                progressBar1.Visible = false;
                 return;
             }
+
+
             // #2
             if (_plant == "Pre-cut")
             {
-                var _p2 = updateCuttingStation(_inbatch);
+
+                var _p2 = await updateCuttingStationAsync(_inbatch);
                 if (!_p2.complete)
                 {
                     MessageBox.Show(_p2.error);
+                    progressBar1.Visible = false;
                     return;
                 }
             }
-            MessageBox.Show("Update Batch Completed");
-            await Task.Delay(1000);
+            MessageBox.Show($"Update Batch Completed {_inbatch}");
+            //await Task.Delay(1000);
             // Perform sRout sDrill and location barcode
-            btn_sOperation.PerformClick();
+
+            //btn_sOperation.PerformClick();
+            // Hide the ProgressBar
+            orderLocation();
+
 
         }
 
-        public (bool complete, string error) updateCuttingStation(string inBatch)
+        public async Task<(bool complete, string error)> updateCuttingStationAsync(string inBatch)
         {
-            bool _complete;
-            string _error;
+            bool _complete = true;
+            string _error = string.Empty;
             string _QrcodeNumber = cb_SelectQRcode.SelectedItem.ToString();
 
-            string q1 = $@"update tblCuttingLists set ProfileSide = case when ProfileSideNum = 90 Then 'L' when ProfileSideNum = 180 Then 'T' when ProfileSideNum = 270 Then 'R' when ProfileSideNum = 360 Then 'B'else 'O' end
-                              where batch in {inBatch} ";
-            // default data (1)
-            string q2 = $@"update tblCuttingLists set sReinforced = 0 where batch in {inBatch} ";
-            string q3 = $@"update tblCuttingLists set sMainProfile = 0 where batch in {inBatch}";
-            string q4 = $@"update tblCuttingLists set sSmallProfile = 0 where batch in {inBatch} ";
-            string q5 = $@"update tblCuttingLists set sGlazing = 0 where batch in {inBatch} ";
-            string q6 = $@"update tblCuttingLists set sRouting = 0 where batch in {inBatch} ";
-            string q7 = $@"update tblCuttingLists set sMilling = 0 where batch in {inBatch} ";
-            string q8 = $@"update tblCuttingLists set sScrew = 0 where batch in {inBatch} ";
-            string q9 = $@"update tblCuttingLists set sDrill = 0 where batch in {inBatch} ";
-            string q10 = $@"update tblCuttingLists set sPacking = 1 where batch in {inBatch} ";
+            // Parse and clean the batch numbers
+            var batchNumbers = inBatch.Trim('(', ')').Split(',')
+                                       .Select(b => b.Trim())
+                                       .ToArray();
 
-             
-            // Update Parameter on TblCuttingList (2)
-            string q11 = $@"update tblCuttingLists set sReinforced = 1 where batch in {inBatch} and MatType in ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement','08 Structure')";
-            
-            string q12 = $@"update tblCuttingLists set sMainProfile = 1 where batch in {inBatch} and MatType in ('01 Frames','02 Sashes') ";
-            
-            string q13 = $@"update tblCuttingLists set sSmallProfile = 1 where batch in {inBatch} and MatType in 
-                        ('04 Lap Joints','11 Sliding tracks','12 Anti liftings',
-                        '13 Frame covers','14 Frame couplings','15 Muntins','17 Flashing profile',
-                        '45 Aluminium','71 Insect Screen Alu','18 Thresholds','72 Insect Screen Profile','03 Mullions',
-                         '63 Non Window Material')";// Add new 15 Jun 2023
-            
-            string q14 = $@"update tblCuttingLists set sGlazing = 1 where batch in {inBatch} and MatType in ('05 Glazing beads')";
-
-            string q15 = $@"update tblCuttingLists set sMilling = 1 where batch in {inBatch} and ( MatType in ('03 Mullions') or (MatType = '02 Sashes' and AngleA = 90 ))";
-
-      
-
-            //13 Sep 2023
-            string q16 = $@"update tblCuttingLists set sScrew = 1 from tblCuttingLists as tbl1 inner join 
-                            (select  Batch,SubBatch,Position,SubPosition,PositionId,ProfileSide,OldContainer,OldSlot from tblCuttingLists where MatType in ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement') 
-                            and Batch in {inBatch}) as tbl2
-                            on tbl1.Batch = tbl2.Batch and tbl1.SubBatch = tbl2.SubBatch and tbl1.Position = tbl2.Position and tbl1.SubPosition = tbl2.SubPosition and tbl1.PositionId = tbl2.PositionId  
-                            and tbl1.ProfileSide = tbl2.ProfileSide and tbl1.OldContainer = tbl2.OldContainer and tbl1.OldSlot = tbl2.OldSlot
-                            where tbl1.MatType in ('01 Frames','02 Sashes','03 Mullions','31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement')";
-
-
-
-            string q17 = $@"update tblCuttingLists set sPacking = 0 where batch in {inBatch} and MatType in ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement') ";
-  
-            //Matching Matcode
-            // Meen P 05 Sep 2023
-            string q18 = $@"update tbl1 set tbl1.sRouting = 1
-                            from  tblCuttingLists as tbl1 
-                            inner join tblOperationList as tbl2
-                            on tbl1.Batch = tbl2.Batch and tbl1.SubBatch = tbl2.SubBatch and tbl1.PcsId =tbl2.PcsId 
-
-                            inner join tblMatcodeMatching as tbm
-                            on 
-                            tbl1.MatCode collate Thai_CI_AS = tbm.SubMatcode collate Thai_CI_AS
-
-                            inner join tblOperationPattern as tbl3
-                            on tbl2.OperationId =tbl3.OperationId and 
-
-                            tbm.Matcode collate Thai_CI_AS = tbl3.MatCode collate Thai_CI_AS
-
-                            where tbl1.Batch in {inBatch} and tbl1.MatType in ('01 Frames','02 Sashes') and tbl3.sRouting = 1";
-
-            string q19 = $@"update tbl1 set tbl1.sDrill = 1
-                            from  tblCuttingLists as tbl1 
-                            inner join tblOperationList as tbl2
-                            on tbl1.Batch = tbl2.Batch and tbl1.SubBatch = tbl2.SubBatch and tbl1.PcsId =tbl2.PcsId 
-
-                            inner join tblMatcodeMatching as tbm 
-                            on tbl1.MatCode collate Thai_CI_AS = tbm.SubMatcode collate Thai_CI_AS
-
-                            inner join tblOperationPattern as tbl3
-                            on tbl2.OperationId =tbl3.OperationId and 
-                            tbm.Matcode collate Thai_CI_AS = tbl3.MatCode collate Thai_CI_AS
-                            where tbl1.Batch in {inBatch} and tbl1.MatType in ('01 Frames','02 Sashes') and tbl3.sDrill = 1";
-
-
-            string q20 = "";
-            if (_QrcodeNumber == "QR:41ea(Ori)")
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
             {
-                // Increase 2 digit to x Subbatch and 3 digit to x Position  41 ea. QRCode (3)
-                q20 = $@"update tblCuttingLists set QrCode = RIGHT(CONCAT('0', OrderNo) ,6) + RIGHT(CONCAT('0', Batch) ,6) +
-                CONVERT(nchar(1),SubBatch) +
-                RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),Position)) ), 2) +
-                CONVERT(nchar(1),SubPosition) 
-                +RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),PositionId)) ), 2) +RIGHT(CONCAT('00', Trim(CONVERT(nchar(3),PcsId)) ), 3) + Trim(ProfileSide) + TRIM(MatCode)
-                +LEFT(MatType,2) + IIF(OldContainer < 0 , '000' ,CONVERT(nchar(3),OldContainer) ) + IIF(OldSlot < 0 , '00' ,RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),OldSlot))) ,2) )
-                where Batch in {inBatch}";
+                return (false, "Invalid batch number format.");
             }
-            else if (_QrcodeNumber == "QR:43ea(New)")
-            {   // Increase 2 digit to x Subbatch and 3 digit to x Position  43 ea. QRCode (4.1)
-                MessageBox.Show("QR = 43");
-                 q20 = $@"update tblCuttingLists set QrCode = RIGHT(CONCAT('0', OrderNo) ,6) + RIGHT(CONCAT('0', Batch) ,6) +
-                RIGHT(CONCAT('0',Trim(CONVERT(nchar(2),SubBatch))),2) +  
-                RIGHT(CONCAT('00', Trim(CONVERT(nchar(3),Position))), 3) + 
-                CONVERT(nchar(1),SubPosition) 
-                +RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),PositionId)) ), 2) +RIGHT(CONCAT('00', Trim(CONVERT(nchar(3),PcsId)) ), 3) + Trim(ProfileSide) + TRIM(MatCode)
-                +LEFT(MatType,2) + IIF(OldContainer < 0 , '000' ,CONVERT(nchar(3),OldContainer) ) + IIF(OldSlot < 0 , '00' ,RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),OldSlot))) ,2) )
-                 where Batch in {inBatch}";
-            }
-            else
+
+            // Prepare parameters for the IN clause
+            var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
+            var parameters = new Dictionary<string, object>();
+            for (int i = 0; i < batchNumbers.Length; i++)
             {
-                MessageBox.Show("QR = 41");
-                // Increase 2 digit to x Subbatch and 3 digit to x Position  41 ea. QRCode (4.2)
-                q20 = $@"update tblCuttingLists set QrCode = RIGHT(CONCAT('0', OrderNo) ,6) + RIGHT(CONCAT('0', Batch) ,6) +
-                CONVERT(nchar(1),SubBatch) +
-                RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),Position)) ), 2) +
-                CONVERT(nchar(1),SubPosition) 
-                +RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),PositionId)) ), 2) +RIGHT(CONCAT('00', Trim(CONVERT(nchar(3),PcsId)) ), 3) + Trim(ProfileSide) + TRIM(MatCode)
-                +LEFT(MatType,2) + IIF(OldContainer < 0 , '000' ,CONVERT(nchar(3),OldContainer) ) + IIF(OldSlot < 0 , '00' ,RIGHT(CONCAT('0', Trim(CONVERT(nchar(2),OldSlot))) ,2) )
-                where Batch in {inBatch}";
+                parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
             }
-          
-           
-            string q21 = $@"update tblOrderPrefGuest set Feb2 = 1 where BatchNo in {inBatch}";
 
-
-            //string _q = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 ;
-            //string _qq = q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18 + q19 + q20 ;
-            //string querys = _q+_qq;
-
-            List<string> querys = new List<string>() {q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21};
-            _complete = true;
-            _error = "No Error";
-            // Tiome Out for 15 Min
-          
-           
-
-            foreach (var query in querys)
+            // Determine QR Code format
+            string qrCodeUpdate;
+            switch (_QrcodeNumber)
             {
-                try
-                {
-                    Center.openConnection_WindsorDB(); //3
-                    Center.sql = query; //1
-                    Center.cmd.CommandText = Center.sql; //2
-
-
-                    int effrow = Center.cmd.ExecuteNonQuery();
-
-                    if (effrow != -1 && effrow != 0)
-                    {
-                        // MessageBox.Show("Update Finish Date: " + inBatch + "Done ! ");
-                        _complete = true;
-                    }
-                    else if (effrow == 0)
-                    {
-                        //MessageBox.Show("No Batch" + inBatch + " to Finish Date Update ! ");
-                        _complete = false;
-                        _error = "No Batch to Finish date Update";
-                    }
-                    else
-                    {
-                        // MessageBox.Show("ERROR Update Finish date process");
-                        _complete = false;
-                        _error = "Error";
-                    }
-                    _error = "";
-                    Center.closeConnection();
-
-                }
-                catch (Exception ex)
-                {
-                    _complete = false;
-                    _error = ex.Message;
-                    MessageBox.Show(ex.Message + "เกิดปัญหาในการลง Batch " + inBatch + " ให้ Delete แล้วลงใหม่");
-
-
+                case "QR:41ea(Ori)":
+                    qrCodeUpdate = $@"update tblCuttingLists set QrCode = 
+                                    RIGHT(CONCAT('0', OrderNo), 6) + 
+                                    RIGHT(CONCAT('0', Batch), 6) + 
+                                    CONVERT(nchar(1), SubBatch) +
+                                    RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), Position))), 2) +
+                                    CONVERT(nchar(1), SubPosition) + 
+                                    RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), PositionId))), 2) +
+                                    RIGHT(CONCAT('00', Trim(CONVERT(nchar(3), PcsId))), 3) + 
+                                    Trim(ProfileSide) + TRIM(MatCode) +
+                                    LEFT(MatType, 2) +
+                                    IIF(OldContainer < 0, '000', CONVERT(nchar(3), OldContainer)) +
+                                    IIF(OldSlot < 0, '00', RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), OldSlot))), 2))
+                                    WHERE Batch IN ({placeholders})";
                     break;
 
-                }
+                case "QR:43ea(New)":
+                    qrCodeUpdate = $@"update tblCuttingLists set QrCode = 
+                                    RIGHT(CONCAT('0', OrderNo), 6) + 
+                                    RIGHT(CONCAT('0', Batch), 6) + 
+                                    RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), SubBatch))), 2) +
+                                    RIGHT(CONCAT('00', Trim(CONVERT(nchar(3), Position))), 3) + 
+                                    CONVERT(nchar(1), SubPosition) + 
+                                    RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), PositionId))), 2) +
+                                    RIGHT(CONCAT('00', Trim(CONVERT(nchar(3), PcsId))), 3) + 
+                                    Trim(ProfileSide) + TRIM(MatCode) +
+                                    LEFT(MatType, 2) +
+                                    IIF(OldContainer < 0, '000', CONVERT(nchar(3), OldContainer)) +
+                                    IIF(OldSlot < 0, '00', RIGHT(CONCAT('0', Trim(CONVERT(nchar(2), OldSlot))), 2))
+                                    WHERE Batch IN ({placeholders})";
+                    break;
+
+                default:
+                    throw new InvalidOperationException("Invalid QR Code format.");
             }
-            Center.closeConnection();
+            // Combine all queries into a single batch
+            string combinedQuery = $@"
+                      UPDATE tblCuttingLists 
+                        SET ProfileSide = CASE 
+                            WHEN ProfileSideNum = 90 THEN 'L' 
+                            WHEN ProfileSideNum = 180 THEN 'T' 
+                            WHEN ProfileSideNum = 270 THEN 'R' 
+                            WHEN ProfileSideNum = 360 THEN 'B' 
+                            ELSE 'O' 
+                        END 
+                        WHERE Batch IN ({placeholders});
+
+                        UPDATE tblCuttingLists 
+                        SET sReinforced = 0, sMainProfile = 0, sSmallProfile = 0, sGlazing = 0, 
+                            sRouting = 0, sMilling = 0, sScrew = 0, sDrill = 0, sPacking = 1 
+                        WHERE Batch IN ({placeholders});
+
+                        UPDATE tblCuttingLists 
+                        SET sReinforced = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement','08 Structure');
+
+                        UPDATE tblCuttingLists 
+                        SET sMainProfile = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('01 Frames','02 Sashes');
+
+                        UPDATE tblCuttingLists 
+                        SET sSmallProfile = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN 
+                            ('04 Lap Joints','11 Sliding tracks','12 Anti liftings','13 Frame covers','14 Frame couplings',
+                            '15 Muntins','17 Flashing profile','45 Aluminium','71 Insect Screen Alu',
+                            '18 Thresholds','72 Insect Screen Profile','03 Mullions','63 Non Window Material');
+
+                        UPDATE tblCuttingLists 
+                        SET sGlazing = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('05 Glazing beads');
+
+                        UPDATE tblCuttingLists 
+                        SET sMilling = 1 
+                        WHERE Batch IN ({placeholders}) AND 
+                            (MatType IN ('03 Mullions') OR (MatType = '02 Sashes' AND AngleA = 90));
+
+                        UPDATE tblCuttingLists 
+                        SET sScrew = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('01 Frames','02 Sashes','03 Mullions',
+                            '31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement') AND EXISTS (
+                                SELECT 1 
+                                FROM tblCuttingLists AS tbl2 
+                                WHERE tbl2.Batch IN ({placeholders}) AND tbl2.MatType IN ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement') 
+                                AND tbl2.Batch = tblCuttingLists.Batch AND tbl2.SubBatch = tblCuttingLists.SubBatch 
+                                AND tbl2.Position = tblCuttingLists.Position AND tbl2.SubPosition = tblCuttingLists.SubPosition 
+                                AND tbl2.PositionId = tblCuttingLists.PositionId AND tbl2.ProfileSide = tblCuttingLists.ProfileSide 
+                                AND tbl2.OldContainer = tblCuttingLists.OldContainer AND tbl2.OldSlot = tblCuttingLists.OldSlot);
+
+                        UPDATE tblCuttingLists 
+                        SET sPacking = 0 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('31 Frame reinforcement','32 Sash reinforcement','33 Mullion reinforcement');
+
+                        UPDATE tblCuttingLists 
+                        SET sRouting = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('01 Frames','02 Sashes') AND EXISTS (
+                            SELECT 1 
+                            FROM tblOperationList AS tbl2
+                            INNER JOIN tblMatcodeMatching AS tbm ON tblCuttingLists.MatCode COLLATE Thai_CI_AS = tbm.SubMatcode COLLATE Thai_CI_AS
+                            INNER JOIN tblOperationPattern AS tbl3 ON tbl2.OperationId = tbl3.OperationId 
+                                AND tbm.Matcode COLLATE Thai_CI_AS = tbl3.MatCode COLLATE Thai_CI_AS
+                            WHERE tbl2.Batch = tblCuttingLists.Batch AND tbl2.SubBatch = tblCuttingLists.SubBatch 
+                                AND tbl2.PcsId = tblCuttingLists.PcsId AND tbl3.sRouting = 1);
+
+                        UPDATE tblCuttingLists 
+                        SET sDrill = 1 
+                        WHERE Batch IN ({placeholders}) AND MatType IN ('01 Frames','02 Sashes') AND EXISTS (
+                            SELECT 1 
+                            FROM tblOperationList AS tbl2
+                            INNER JOIN tblMatcodeMatching AS tbm ON tblCuttingLists.MatCode COLLATE Thai_CI_AS = tbm.SubMatcode COLLATE Thai_CI_AS
+                            INNER JOIN tblOperationPattern AS tbl3 ON tbl2.OperationId = tbl3.OperationId 
+                                AND tbm.Matcode COLLATE Thai_CI_AS = tbl3.MatCode COLLATE Thai_CI_AS
+                            WHERE tbl2.Batch = tblCuttingLists.Batch AND tbl2.SubBatch = tblCuttingLists.SubBatch 
+                                AND tbl2.PcsId = tblCuttingLists.PcsId AND tbl3.sDrill = 1);
+                        {qrCodeUpdate};
+
+                   
+                ";
+            try
+            {
+                Console.WriteLine($"Start Inserting cutting list queries {batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Start Inserting cutting list queries {batchNumbers}");
+                // Execute combined query
+               int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(combinedQuery, parameters, useLinkQv: false);
+
+                Console.WriteLine($"Done Inserting queries effect row {rowsAffected}");
+                UpdateProgressLabel(progressLabel, $"Done Inserting queries effect row {rowsAffected}");
+
+            }
+            catch (Exception ex)
+            {
+                _complete = false;
+                _error = ex.Message;
+                Logger.Log("Error in updateCuttingStation", ex); // Replace with your logging mechanism
+            }
 
             return (_complete, _error);
-
-
         }
 
-        public (bool complete, string error) updateSomeBatch(string inBatch, string plant)
+
+        public async Task<(bool complete, string error)> updateSomeBatchAsync(string inBatch, string plant)
         {
-            bool _complete;
-            string _error;
-            // Deleted Old data
-            string _q1 = $@"Delete from tblOrderPrefGuest where BatchNo in {inBatch}";
-            string _q2 = $@"Delete from tblOperationList  where Batch in {inBatch}";
-            string _q3 = $@"Delete from tblCuttingLists where Batch in {inBatch}";
+            bool _complete = false;
+            string _error = string.Empty;
 
-            // insert into [Windsor_NPIRY].[dbo].tblOrderPrefGuest
-            string _q4 = $@"insert into tblOrderPrefGuest(OrderNo,BatchNo,SubBatch,ProductionLine,Plan_Start,Plan_Finish,LastUpdate,Capacity,Unit,Frames,Sashes,Mullions,Squares,Glasses,Area,Plan_Start_Pref,Plan_Finish_Pref)
-                            select tbl1.OrderNumber,tbl1.Batch,tbl1.Cycle,tbl1.ProductionLineName,tbl1.Plan_Start,tbl1.Plan_Finish,CURRENT_TIMESTAMP,tbl1.Cap,tbl1.Unit,tbl1.Frames,tbl1.Sashes,tbl1.Mullions,tbl1.Squares,tbl1.Glasses,tbl2.area,tbl1.Plan_Start,tbl1.Plan_Finish
-                            from [LinkQV].[dbo].ProductionPlan as tbl1
-							inner join [LinkQV].[dbo].[ProductionCAP] as tbl2
-							on tbl1.Batch = tbl2.Batch and tbl1.Cycle = tbl2.Cycle
-                            where tbl1.Batch in {inBatch}";
-            // insert into [Windsor_NPIRY].[dbo].tblCuttingLists
-            string _q5 = $@"insert into 
-                         tblCuttingLists 
-                         (OrderNo,Batch,SubBatch,Position,SubPosition,PositionId,PcsId,MatType,MatCode,MatName,ProfileId,ProfileSubId,QtperCut,Qt,Length,AngleA,AngleB,OldProfileType,CustomerCode,OldMachineId,OldContainer,OldSlot,timeStamp,ProfileSideNum,SubPositionGlass)
-                         select  
-                         OrderNumber,ProductionLot,ProductionSet,SortOrder,SubModel,ProductionSetInstance,[ProdCamPiece.AbsolutePieceNumber],[Material.class],[Material.Reference],[Material.Description],[Rod.Number],[ProfilePiece.PieceNumber],[Rod.Instances],[Rod.Instance],[ProfilePiece.Length],[ProfilePiece.AngleA],[ProfilePiece.AngleB],[Role],Concepto,MachineId,ProfilePieceContainer,ProfilePieceSlot,[Timestamp],[ProfilePiece.Orientations],[FieldId] 
-                         from [LinkQV].[dbo].Opt_Cut_Test
-                         where ProductionLot in {inBatch} ";
+            // Parse and clean the input batch numbers
+            var batchNumbers = inBatch.Trim('(', ')').Split(',')
+                                       .Select(b => b.Trim())
+                                       .ToArray();
 
-            // insert into [Windsor_NPIRY].[dbo].tblOperationList
-            string _q6 = $@"insert into tblOperationList (Batch,SubBatch,PcsId,OperationId,dX,Mill,TimeStamp)
-			                select ProductionLot,ProductionSet,AbsolutePieceNumber,ToolName,Xmc,Millmc,CURRENT_TIMESTAMP
-			                from [LinkQV].[dbo].Profile_Operation
-			                where  Millmc is not null and  ProductionLot in  {inBatch}";
-
-
-            string _q;
-            if (plant == "Pre-cut")
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
             {
-                // Deleted Old data  _q1 + _q2 + _q3
-                //insert into [Windsor_NPIRY].[dbo].tblOrderPrefGuest _q4
-                //insert into [Windsor_NPIRY].[dbo].tblOperationList _q6
+                return (false, "Invalid batch number format.");
+            }
 
-                _q = _q1 + _q2 + _q3 + _q4 +_q5 + _q6;
+            // Prepare parameterized query with dynamic placeholders for IN clause
+            var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
+            var parameters = new Dictionary<string, object>();
+
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
             }
-            else
-            {   // delete tblOrderPrefGuest _q1
-                // insert into [Windsor_NPIRY].[dbo].tblOrderPrefGuest _q4
-                _q = _q1 + _q4;
-            }
+
+            // Construct queries dynamically
+            string query1 = $"DELETE FROM tblOrderPrefGuest WHERE BatchNo IN ({placeholders});";
+            string query2 = $"DELETE FROM tblOperationList WHERE Batch IN ({placeholders});";
+            string query3 = $"DELETE FROM tblCuttingLists WHERE Batch IN ({placeholders});";
+            string qDelete = query1 + query2 + query3;
+
+            string _q4 = $@"INSERT INTO tblOrderPrefGuest (
+                        OrderNo, BatchNo, SubBatch, ProductionLine, Plan_Start, Plan_Finish,
+                        LastUpdate, Capacity, Unit, Frames, Sashes, Mullions, Squares, Glasses, Area,
+                        Plan_Start_Pref, Plan_Finish_Pref
+                        )
+                        SELECT
+                            tbl1.OrderNumber, tbl1.Batch, tbl1.Cycle, tbl1.ProductionLineName,
+                            tbl1.Plan_Start, tbl1.Plan_Finish, CURRENT_TIMESTAMP,
+                            tbl1.Cap, tbl1.Unit, tbl1.Frames, tbl1.Sashes, tbl1.Mullions,
+                            tbl1.Squares, tbl1.Glasses, tbl2.area, tbl1.Plan_Start, tbl1.Plan_Finish
+                        FROM [LinkQV].[dbo].ProductionPlan AS tbl1
+                        INNER JOIN [LinkQV].[dbo].[ProductionCAP] AS tbl2
+                        ON tbl1.Batch = tbl2.Batch AND tbl1.Cycle = tbl2.Cycle
+                        WHERE tbl1.Batch IN ({placeholders});";
+
+            string _q5 = $@"INSERT INTO tblCuttingLists (
+                        OrderNo, Batch, SubBatch, Position, SubPosition, PositionId, PcsId,
+                        MatType, MatCode, MatName, ProfileId, ProfileSubId, QtperCut, Qt, Length,
+                        AngleA, AngleB, OldProfileType, CustomerCode, OldMachineId, OldContainer,
+                        OldSlot, timeStamp, ProfileSideNum, SubPositionGlass
+                        )
+                        SELECT
+                            OrderNumber, ProductionLot, ProductionSet, SortOrder, SubModel,
+                            ProductionSetInstance, [ProdCamPiece.AbsolutePieceNumber],
+                            [Material.class], [Material.Reference], [Material.Description],
+                            [Rod.Number], [ProfilePiece.PieceNumber], [Rod.Instances], [Rod.Instance],
+                            [ProfilePiece.Length], [ProfilePiece.AngleA], [ProfilePiece.AngleB], [Role],
+                            Concepto, MachineId, ProfilePieceContainer, ProfilePieceSlot, [Timestamp],
+                            [ProfilePiece.Orientations], [FieldId]
+                        FROM [LinkQV].[dbo].Opt_Cut_Test
+                        WHERE ProductionLot IN ({placeholders});";
+
+            string _q6 = $@"INSERT INTO tblOperationList (
+                        Batch, SubBatch, PcsId, OperationId, dX, Mill, TimeStamp
+                        )
+                        SELECT
+                            ProductionLot, ProductionSet, AbsolutePieceNumber, ToolName, Xmc, Millmc, CURRENT_TIMESTAMP
+                        FROM [LinkQV].[dbo].Profile_Operation
+                        WHERE Millmc IS NOT NULL AND ProductionLot IN ({placeholders});";
+
+            string _q7 = $@"update tblOrderPrefGuest set Feb2 = 1 where BatchNo in ({placeholders})";
+
+            string qInsert = _q4 + _q5 + _q6 + _q7;
 
             try
             {
-                Center.sql = _q; //1
-                Center.cmd.CommandText = Center.sql; //2
-                Center.openConnection_WindsorDB(); //3
+                Console.WriteLine($"Executing DELETE queries...{batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Deleting old batch data...{batchNumbers}");
 
-                int effrow = Center.cmd.ExecuteNonQuery();
+                int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qDelete, parameters, useLinkQv: false);
 
-                if (effrow != -1 && effrow != 0)
-                {
-                    // MessageBox.Show("Update Finish Date: " + inBatch + "Done ! ");
-                    _complete = true;
-                }
-                else if (effrow == 0)
-                {
-                    //MessageBox.Show("No Batch" + inBatch + " to Finish Date Update ! ");
-                    _complete = false;
-                    _error = "No Batch to Finish date Update";
-                }
-                else
-                {
-                    // MessageBox.Show("ERROR Update Finish date process");
-                    _complete = false;
-                    _error = "Error";
-                }
-                _error = "";
-                Center.closeConnection();
-                return (_complete, _error);
+                Console.WriteLine($"Done DELETE queries effect row {rowsAffected}");
+                UpdateProgressLabel(progressLabel, $"Done DELETE queries effect row {rowsAffected}");
+
+                Console.WriteLine("Inserting new batch data...");
+                UpdateProgressLabel(progressLabel, $"Inserting new batch data...{batchNumbers}");
+                // Add further queries for insertion if required
+                rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qInsert, parameters, useLinkQv: false);
+
+                Console.WriteLine($"Done Inserting queries effect row {rowsAffected}");
+                UpdateProgressLabel(progressLabel, $"Done Inserting queries effect row {rowsAffected}");
+
+                _complete = true;
             }
             catch (Exception ex)
-            {              
-                _complete = false;
-                MessageBox.Show(ex.Message);
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                // Log the error instead of showing it in a MessageBox in production
+                Logger.Log("Error in updateSomeBatch", ex);
                 _error = ex.Message;
+                _complete = false;
             }
+
+            // Inserting to LinkQV
+            //string _q = plant == "Pre-cut" ? _q1 + _q2 + _q3 + _q4 + _q5 + _q6 + _q7 : _q1 + _q4;
+           
             return (_complete, _error);
         }
 
 
 
-
-
-
-
-        private void btDeleteBatch_Click(object sender, EventArgs e)
+        private async void btDeleteBatch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
             {
@@ -476,8 +546,8 @@ namespace WindowsFormsApp1
             if (_r2 == DialogResult.No)
                 return;
 
-            var _p1 = DeleteBatch(_inbatch);
-            if (!_p1.complate)
+            var _p1 = await DeleteBatchAsync(_inbatch);
+            if (!_p1.complete)
             {
                 MessageBox.Show(_p1.error);
                 return;
@@ -486,54 +556,53 @@ namespace WindowsFormsApp1
 
         }
 
-        public (bool complate, string error) DeleteBatch(string inBatch)
+        public async Task<(bool complete, string error)> DeleteBatchAsync(string inBatch)
         {
-            string _q1 = $@"Delete from tblOrderPrefGuest where BatchNo in {inBatch}";
-            string _q2 = $@"Delete from tblOperationList  where Batch in {inBatch}";
-            string _q3 = $@"Delete from tblCuttingLists where Batch in {inBatch}";
-            string _q = _q1 + _q2 + _q3;
+            // Parse and clean the batch numbers
+            var batchNumbers = inBatch.Trim('(', ')').Split(',')
+                                       .Select(b => b.Trim())
+                                       .ToArray();
+
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
+            {
+                return (false, "Invalid batch number format.");
+            }
+
+            // Prepare placeholders and parameters
+            var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
+            var parameters = new Dictionary<string, object>();
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
+            }
+
+            // Prepare parameterized queries
+            string _q1 = $"DELETE FROM tblOrderPrefGuest WHERE BatchNo IN ({placeholders});";
+            string _q2 = $"DELETE FROM tblOperationList WHERE Batch IN ({placeholders});";
+            string _q3 = $"DELETE FROM tblCuttingLists WHERE Batch IN ({placeholders});";
 
             try
             {
-                
-                Center.sql = _q; //1
-                Center.cmd.CommandText = Center.sql; //2
-                Center.openConnection_WindsorDB(); //3
+                // Execute queries
+                await DatabaseHelper.ExecuteNonQueryAsync(_q1, parameters);
+                await DatabaseHelper.ExecuteNonQueryAsync(_q2, parameters);
+                await DatabaseHelper.ExecuteNonQueryAsync(_q3, parameters);
 
-                int effrow = Center.cmd.ExecuteNonQuery();
-
-                if (effrow != -1 && effrow != 0)
-                {
-                    MessageBox.Show("Deleted Batched: " + inBatch + "Done ! ");
-                }
-                else if (effrow == 0)
-                {
-                    MessageBox.Show("No Batch" + inBatch + " to Deleted ! ");
-                }
-                else
-                {
-                    MessageBox.Show("ERROR Deleted process");
-                }
-
-                Center.closeConnection();
-
-
+                return (true, "Batch deletion completed successfully.");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                // Log the error (replace with your logging mechanism)
+                Logger.Log("Error in DeleteBatch", ex);
 
-                throw;
+                return (false, ex.Message);
             }
-          
-            return (true, "");
         }
 
 
 
         private (bool complete, string error, List<int> batch) batchVerify(string batchNo)
         {
-
-
             string _batchs = batchNo;
             _batchs = _batchs.Substring(1, _batchs.Length - 2);
             string[] _batch = _batchs.Split(',');
@@ -560,61 +629,51 @@ namespace WindowsFormsApp1
             }
             return (true, "", _batchNo);
         }
-
-        public (List<int> batch, List<bool> feb2) searchBatchInDb(string inBatch, bool isFeb1)
+        public async Task<(List<int> batch, List<bool> feb2)> searchBatchInDbAsync(string inBatch, bool isFeb1)
         {
-            string _q = "";
-            if (isFeb1)
-                _q = $@"select BatchNo ,Feb2 from tblOrderPrefGuest where BatchNo in {inBatch}";
-            else
-                _q = $@"select tbl1.BatchNo ,tbl1.Feb2
-                        from tblOrderPrefGuest as tbl1
-                        inner join(select Batch from tblCuttingLists where Batch in {inBatch} group by Batch) as tbl2
-                        on tbl1.BatchNo = tbl2.Batch";
+            // Split the input into individual batch numbers
+            var batchNumbers = inBatch.Trim('(', ')').Split(',')
+                                       .Select(b => b.Trim())
+                                       .ToArray();
 
-            //try
-            //{
-                Center.sql = _q; //1
-                Center.cmd.CommandText = Center.sql; //2
-                Center.openConnection_WindsorDB(); //3 
-                SqlDataReader sqlDataReader = Center.cmd.ExecuteReader(); //4
+            // Validate all batch numbers
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
+            {
+                MessageBox.Show("Invalid batch number format.");
+                return (new List<int>(), new List<bool>());
+            }
 
-                DataTable _dt = new DataTable();
-                _dt.Load(sqlDataReader);
+            // Build dynamic query with parameters
+            var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
 
-                Center.cmd.Dispose();
-                sqlDataReader.Close();
-                Center.closeConnection();
+            string query = isFeb1
+                ? $"SELECT BatchNo, Feb2 FROM tblOrderPrefGuest WHERE BatchNo IN ({placeholders})"
+                : $"SELECT tbl1.BatchNo, tbl1.Feb2 " +
+                  $"FROM tblOrderPrefGuest AS tbl1 " +
+                  $"INNER JOIN (SELECT Batch FROM tblCuttingLists WHERE Batch IN ({placeholders}) GROUP BY Batch) AS tbl2 " +
+                  $"ON tbl1.BatchNo = tbl2.Batch";
 
-                List<int> _batch = new List<int>();
-                List<bool> _feb2 = new List<bool>();
+            // Prepare parameters
+            var parameters = new Dictionary<string, object>();
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
+            }
 
-                for (int i = 0; i < _dt.Rows.Count; i++)
-                {
-                    int _b = int.Parse(_dt.Rows[i][0].ToString());
-                    if (_dt.Rows[i][1] == null)
-                    {
-                        MessageBox.Show("Feb is Null");
-                        break;
-                    }
-                    bool _f;
+            // Execute the query
+            DataTable result = await DatabaseHelper.ExecuteQueryAsync(query, parameters, useLinkQv: false);
 
-                    if (_dt.Rows[i][1].ToString() == "")
-                    {
-                        _f = false;
-                    }
-                    else
-                    {
-                        _f = bool.Parse(_dt.Rows[i][1].ToString());
-                    }
-                 
-                   
-                    _batch.Add(_b);
-                    _feb2.Add(_f);
-                }
-                return (_batch, _feb2);
-
+            // Process the result
+            var batch = new List<int>();
+            var feb2 = new List<bool>();
+            foreach (DataRow row in result.Rows)
+            {
+                batch.Add(Convert.ToInt32(row["BatchNo"]));
+                feb2.Add(Convert.ToBoolean(row["Feb2"]));
+            }
+            return (batch, feb2);
         }
+
 
         private void btEditStart_Click(object sender, EventArgs e)
         {
@@ -646,7 +705,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Please fill Batch number ex. (65652)");
             }
-           
+
         }
 
         public (bool complete, string error) editPlanStart(string inBatch, string startCutting)
@@ -657,7 +716,7 @@ namespace WindowsFormsApp1
 
             if (!string.IsNullOrEmpty(txtBatchList.Text))
             {
-               
+
 
                 try
                 {
@@ -698,7 +757,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No Batch in textbox fill up ex. (65656)");
                 return (_complete, _error);
             }
-         
+
         }
 
         private void brEditFinish_Click(object sender, EventArgs e)
@@ -782,21 +841,7 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void PlanningPrecut_Load(object sender, EventArgs e)
-        {
-           
-            if (Center.Identity == "")
-            {
-                label_server.Text = "Line1 โรงล่าง Default";
-            }
-            else
-            {
-                label_server.Text = Center.Identity;
-            }
-            initialCB_LinkQV();
-            initialCB_CuttingLists();
-            initialCB_SelectQRcode();
-        }
+        
 
         private void initialCB_SelectQRcode()
         {
@@ -823,8 +868,10 @@ namespace WindowsFormsApp1
         }
         private void btn_LinkQV_Click(object sender, EventArgs e)
         {
-            string dataTable,selectDataTable,batchName,q;
+            string dataTable, selectDataTable, batchName, q;
+
             dataTable = cb_LinkQV.SelectedItem.ToString();
+
             string batches = txtBatchList.Text.Trim();
             if (string.IsNullOrEmpty(batches))
             {
@@ -834,31 +881,31 @@ namespace WindowsFormsApp1
 
             if (dataTable == "ProductionPlan")
             {
-                selectDataTable = "[ProductionPlan_Table]";
+                selectDataTable = "[LinkQV].[dbo].[ProductionPlan_Table]";
                 batchName = "[Batch]";
             }
             else if (dataTable == "ProductionCap")
             {
-                selectDataTable = "[ProductionCAP_Table]";
+                selectDataTable = "[LinkQV].[dbo].[ProductionCAP_Table]";
                 batchName = "[Batch]";
             }
             else if (dataTable == "Opt_cut_test")
             {
-                selectDataTable = "[Opt_Cut_test_Table]";
+                selectDataTable = "[LinkQV].[dbo].[Opt_Cut_test_Table]";
                 batchName = "[ProductionLot]";
             }
             else if (dataTable == "Profile Operation")
             {
-                selectDataTable = "[Profile_Operation_Table]";
+                selectDataTable = "[LinkQV].[dbo].[Profile_Operation_Table]";
                 batchName = "[ProductionLot]";
             }
             else
             {
                 return;
             }
-            
+
             dataGridView1.DataSource = null;
-            string q1 = "SELECT * FROM "+ selectDataTable + " where "+ batchName + "in "+ batches + " ";
+            string q1 = "SELECT * FROM " + selectDataTable + " where " + batchName + "in " + batches + " ";
 
             try
             {
@@ -871,9 +918,9 @@ namespace WindowsFormsApp1
                 Center.data_set = new DataSet();
                 Center.data_adpater.Fill(Center.data_set, selectDataTable);
                 dataGridView1.DataSource = Center.data_set.Tables[0];
-                               
+
                 Center.closeConnection();
-               
+
 
             }
             catch (Exception ex)
@@ -881,8 +928,8 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show(ex.ToString());
             }
-          
-           // laRowCount.Text = dt.Rows.Count.ToString();
+
+            // laRowCount.Text = dt.Rows.Count.ToString();
             laRowCount.Text = dataGridView1.Rows.Count.ToString();
 
 
@@ -904,7 +951,7 @@ namespace WindowsFormsApp1
             {
                 q = "SELECT [OrderNo],[Batch],[SubBatch],[Position],[PositionId],[PcsId],[MatType]," +
                     "[MatCode],[MatName],[Length],[ProfileSide],[OldProfileType],[CartNo],[CartSlot]," +
-                    "[Status],[QrCode],[timeStamp]FROM [tblCuttingLists] where Batch in"+ batches + "";
+                    "[Status],[QrCode],[timeStamp]FROM [tblCuttingLists] where Batch in" + batches + "";
             }
             else if (Condition == "Missing QR Code")
             {
@@ -926,7 +973,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-            
+
                 MessageBox.Show("No Condition Matched");
                 return;
             }
@@ -957,129 +1004,119 @@ namespace WindowsFormsApp1
         }
 
 
-        private void btn_notStartBatches_Click(object sender, EventArgs e)
+        private async void btn_notStartBatches_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            string q1 = "select ProductionLine,OrderNo,BatchNo,SubBatch,Plan_Start,Plan_Finish,Actual_Start,Actual_Finish,LastUpdate,Capacity,Area from tblOrderPrefGuest where ProductionLine in " +
-                "('Auto Precut CMW','Auto Precut SLW','Auto Precut Door') and  Actual_Start is null order by Plan_Start,BatchNo,SubBatch ";
+            string query = @"
+                        SELECT ProductionLine, OrderNo, BatchNo, SubBatch, Plan_Start, Plan_Finish, 
+                               Actual_Start, Actual_Finish, LastUpdate, Capacity, Area
+                        FROM tblOrderPrefGuest
+                        WHERE ProductionLine IN ('Auto Precut CMW', 'Auto Precut SLW', 'Auto Precut Door')
+                          AND Actual_Start IS NULL
+                        ORDER BY Plan_Start, BatchNo, SubBatch";
 
             try
             {
-                // add to data grid view
-                Center.cmd.CommandText = q1;
-                Center.openConnection_WindsorDB();
-                Center.cmd.ExecuteNonQuery();
+                // Fetch data asynchronously
+                DataTable result = await DatabaseHelper.ExecuteQueryAsync(query, useLinkQv: false);
 
-                Center.data_adpater = new SqlDataAdapter(Center.cmd); ;
-                Center.data_set = new DataSet();
-                Center.data_adpater.Fill(Center.data_set, "tblOrderPrefGuest");
-                dataGridView1.DataSource = Center.data_set.Tables[0];
-
-                // read
-                Center.data_reader = Center.cmd.ExecuteReader();
-                List<string> batches = new List<string>() { };
-                List<double> sqms = new List<double>() { };
-
-                while (Center.data_reader.Read())
+                foreach (DataRow row in result.Rows)
                 {
-                    string batch = Center.data_reader.GetValue(0).ToString();
-                    double sqm = Convert.ToDouble(Center.data_reader.GetValue(10));
-                    sqms.Add(sqm);
-                    batches.Add(batch);
-
+                    Console.WriteLine(row["BatchNo"].GetType());
                 }
 
-
-                Center.data_reader.Close();
-                Center.closeConnection();
-
-                double sumSqm = 0;
-                foreach (var item in sqms)
+                if (result.Rows.Count > 0)
                 {
-                    sumSqm += item;
-                }
-                la_sqmInNotStart.Text = String.Format("{0:0.00}", sumSqm);
-                la_notStartBatch.Text = batches.Count.ToString();
+                    // Bind result to DataGridView
+                    dataGridView1.DataSource = result;
 
+                    // Use LINQ for aggregation
+                    List<string> batches = result.AsEnumerable()
+                              .Select(row => row.Field<int>("BatchNo").ToString())
+                              .ToList();
+
+                    double totalSqm = result.AsEnumerable()
+                                            .Sum(row => row.Field<double?>("Area") ?? 0);
+
+                    // Update UI labels
+                    la_sqmInNotStart.Text = totalSqm.ToString("0.00");
+                    la_notStartBatch.Text = batches.Count.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No records found for not-started batches.");
+                }
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
-
-            
-
         }
 
-        private void btn_InProcessBatch_Click(object sender, EventArgs e)
+
+
+        private async void btn_InProcessBatch_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            string q1 = "select ProductionLine,OrderNo,BatchNo,SubBatch,Plan_Start,Plan_Finish,Actual_Start,Actual_Finish,LastUpdate,Capacity,Area from tblOrderPrefGuest where ProductionLine in ('Auto Precut CMW','Auto Precut SLW','Auto Precut Door') " +
-                "and  Actual_Start is not null and  Actual_Finish is null order by Plan_Start,BatchNo,SubBatch";
+            string query = @"
+                        SELECT ProductionLine, OrderNo, BatchNo, SubBatch, Plan_Start, Plan_Finish, 
+                               Actual_Start, Actual_Finish, LastUpdate, Capacity, Area
+                        FROM tblOrderPrefGuest 
+                        WHERE ProductionLine IN ('Auto Precut CMW', 'Auto Precut SLW', 'Auto Precut Door')
+                          AND Actual_Start IS NOT NULL 
+                          AND Actual_Finish IS NULL
+                        ORDER BY Plan_Start, BatchNo, SubBatch";
 
             try
             {
-                // add to data grid view
-                Center.cmd.CommandText = q1;
-                Center.openConnection_WindsorDB();
-                Center.cmd.ExecuteNonQuery();
+                // Fetch data asynchronously
+                DataTable result = await DatabaseHelper.ExecuteQueryAsync(query, useLinkQv: false);
 
-                Center.data_adpater = new SqlDataAdapter(Center.cmd); ;
-                Center.data_set = new DataSet();
-                Center.data_adpater.Fill(Center.data_set, "tblOrderPrefGuest");
-                dataGridView1.DataSource = Center.data_set.Tables[0];
-
-                // read
-                Center.data_reader = Center.cmd.ExecuteReader();
-                List<string> batches = new List<string>() { };
-                List<double> sqms = new List<double>() { };
-
-
-                while (Center.data_reader.Read())
+                if (result.Rows.Count > 0)
                 {
-                    string batch = Center.data_reader.GetValue(0).ToString();
-                    double sqm = Convert.ToDouble(Center.data_reader.GetValue(10));
-                    batches.Add(batch);
-                    sqms.Add(sqm);
+                    dataGridView1.DataSource = result;
 
+                    // Calculate batches and total sqm asynchronously
+                    List<int> batches = result.AsEnumerable()
+                                                  .Select(row => row.Field<int>("BatchNo"))
+                                                  .ToList();
+
+                    double totalSqm = result.AsEnumerable()
+                                            .Sum(row => row.Field<double?>("Area") ?? 0);
+
+                    // Update UI labels
+                    la_sqmInProcess.Text = totalSqm.ToString("0.00");
+                    la_inProcessBatch.Text = batches.Count.ToString();
                 }
-
-                Center.data_reader.Close();
-                Center.closeConnection();
-                double sumSqm = 0;
-                foreach (var item in sqms)
+                else
                 {
-                    sumSqm += item;
+                    MessageBox.Show("No records found for in-process batches.");
                 }
-                la_sqmInProcess.Text = String.Format("{0:0.00}", sumSqm);
-
-                la_inProcessBatch.Text = batches.Count.ToString();
-
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
         private void btn_sOperation_Click(object sender, EventArgs e)
         {
-            sRout();
-            sDrill();
-
+            //sRout();
+            //sDrill();
             // for test Precut
-           // orderLocation();
+            orderLocation();
             //----
 
         }
+
+
+        // Re-complied sDrill & sRout
         private void sDrill()
         {
-          
+
             string qAll;
             string batch = txtBatchList.Text.Trim();
-           
+
 
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
             {
@@ -1087,9 +1124,6 @@ namespace WindowsFormsApp1
                 return;
 
             }
-
-        
-
             qAll = $@"update tbl1 set tbl1.sDrill = 1
                                 from  tblCuttingLists as tbl1 
                                 inner join tblOperationList as tbl2
@@ -1131,31 +1165,16 @@ namespace WindowsFormsApp1
         }
         private void sRout()
         {
-            //string q1;
-            //string q2;
-            //string q3;
-            //string q4;
-            //string q5, q6;
+
             string qAll;
             string batch = txtBatchList.Text.Trim();
-            // Batch = batch;
-
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
             {
                 MessageBox.Show("put number in Batch_txtbox!", "Frm_OutStandardRout : Meen P", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 
             }
-
-            //q1 = " update tbl1 set tbl1.sRouting = 1 from  tblCuttingLists as tbl1 ";
-            //q2 = " inner join tblOperationList as tbl2";
-            //q3 = " on tbl1.Batch = tbl2.Batch and tbl1.SubBatch = tbl2.SubBatch and tbl1.PcsId =tbl2.PcsId ";
-            //q4 = " inner join tblOperationPattern as tbl3";
-            //q5 = " on tbl2.OperationId =tbl3.OperationId and tbl1.MatCode = tbl3.MatCode";
-            //q6 = " where tbl1.Batch in (" + batch + ") and tbl1.MatType in ('01 Frames','02 Sashes') and tbl3.sRouting = 1";
-
-
-            qAll  = $@"update tbl1 set tbl1.sRouting = 1
+            qAll = $@"update tbl1 set tbl1.sRouting = 1
                             from  tblCuttingLists as tbl1 
                             inner join tblOperationList as tbl2
                             on tbl1.Batch = tbl2.Batch and tbl1.SubBatch = tbl2.SubBatch and tbl1.PcsId =tbl2.PcsId 
@@ -1166,7 +1185,6 @@ namespace WindowsFormsApp1
                             inner join tblOperationPattern as tbl3
                             on tbl2.OperationId =tbl3.OperationId and tbm.Matcode collate Thai_CI_AS = tbl3.MatCode collate Thai_CI_AS
                             where tbl1.Batch in {batch} and tbl1.MatType in ('01 Frames','02 Sashes') and tbl3.sRouting = 1";
-
             try
             {
 
@@ -1192,325 +1210,411 @@ namespace WindowsFormsApp1
             }
 
             MessageBox.Show("sRout Updated completed");
-
-
         }
 
-        private void orderLocation()
+        private async void orderLocation()
         {
-            if (Center.Location!=3)
+
+            if (Center.Location != 3)
             {
-                LocationPrecut_1and2();
+                await LocationPrecut_1and2Async();
+                progressBar1.Visible = false;
             }
             else
             {
-                LocationPrecut_3();
+               await LocationPrecut_3Async();
             }
-          
+
         }
 
-        public void LocationPrecut_3()
+        public async Task LocationPrecut_3Async()
         {
-            MessageBox.Show("Precut3 dont have location program");
-        }
-
-        public void LocationPrecut_1and2()
-        {
+            // Show the ProgressBar
+            var batchesText = txtBatchList.Text.Trim();
             if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
             {
-                MessageBox.Show("put number in Batch_txtbox!", "Frm_PlanningPrecut : Meen P", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Put number in Batch_txtbox!", "Frm_PlanningPrecut : Meen P", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                progressBar1.Visible = false;
                 return;
-
             }
-            string qAll;
-            string batches = txtBatchList.Text.Trim();
-            string orders = "";
-            List<string> list_orders = new List<string>();
 
-            var _q = $@"select Batch,OrderNumber, COUNT(*)
-                          from [ProductionPlan_Table]
-                          where Batch in {batches}
-                          Group by  Batch,OrderNumber
-                          Having COUNT(*) > 1";
+            // Parse and clean the batches
+            var batchNumbers = txtBatchList.Text.Trim('(', ')').Split(',')
+                                .Select(b => b.Trim())
+                                .ToArray();
+
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
+            {
+                MessageBox.Show("Invalid batch number format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
+                return;
+            }
+
+            // Prepare parameterized query for batch numbers
+            var batchPlaceholders = string.Join(", ", batchNumbers.Select((_, index) => $"@batch{index}"));
+            var batchParameters = new Dictionary<string, object>();
+           
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                batchParameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
+            }
+
+            string queryGetOrders = $@"
+                    SELECT Batch, OrderNumber, COUNT(*)
+                    FROM [ProductionPlan_Table]
+                    WHERE Batch IN ({batchPlaceholders})
+                    GROUP BY Batch, OrderNumber
+                    HAVING COUNT(*) > 1";
+
+            List<(string OrderNumber, string Batch)> orderBatchPairs = new List<(string OrderNumber, string Batch)>();
 
             try
             {
+                Console.WriteLine($"Start checking Batch OrderDetail queries {batchesText}");
+                UpdateProgressLabel(progressLabel, $"Start checking Batch queries {batchesText}");
+                // Execute the query and fetch order numbers with their corresponding batches
+                DataTable result = await DatabaseHelper.ExecuteQueryAsync(queryGetOrders, batchParameters, useLinkQv: true);
 
-                //List<string> duplicates = new List<string>(); // For Data reader method2
-                Center.sql = _q;
-                Center.cmd.CommandText = Center.sql;
-                Center.openConnection_LinkQvDB();
-                Center.data_reader = Center.cmd.ExecuteReader();
-                while (Center.data_reader.Read())
+                Console.WriteLine($"Done checking Batch OrderDetail queries result row {result}");
+                UpdateProgressLabel(progressLabel, $"Done checking Batch OrderDetail queries result  {result}");
+
+                if (result.Rows.Count == 0)
                 {
-                    string myString = Center.data_reader.GetValue(1).ToString(); //The 0 stands for "the 0'th column", so the first column of the result.
-                                                                                 // Do somthing with this rows string, for example to put them in to a list
-
-                    orders += myString + ",";
-                    list_orders.Add(myString);
-
-
+                    MessageBox.Show("Error: No orders found.");
+                    return;
                 }
-                orders = orders.Remove(orders.Length - 1);
 
-                // Call Close when done reading.
-                Center.data_reader.Close();
-                Center.closeConnection();
-
-                if (String.IsNullOrEmpty(orders))
+                foreach (DataRow row in result.Rows)
                 {
-                    MessageBox.Show("Error No Orders found:" + orders);
+                    string orderNumber = row["OrderNumber"].ToString();
+                    string batch = row["Batch"].ToString();
+                    orderBatchPairs.Add((orderNumber, batch));
+                }
+
+                if (orderBatchPairs.Count == 0)
+                {
+                    MessageBox.Show("Error: No orders found.");
                     return;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error Fetching Orders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
+                return;
             }
 
-            string _q1 = $@"Delete from tblOrderLocation where [Order_Precut] in ({orders})";
+            // Delete existing records in tblOrderDetail for the fetched orders
+            string deleteQuery = $@"DELETE FROM [tblOrderDetail] WHERE [Order] IN ({string.Join(", ", orderBatchPairs.Select(o => $"'{o.OrderNumber}'"))})";
             try
             {
-
-                Center.openConnection_WindsorDB();
-                Center.cmd.CommandText = _q1;
-
-                int effRow = Center.cmd.ExecuteNonQuery();
-                if (effRow > 0)
-                {
-                    // MessageBox.Show("Effect to orderLocation row is " + effRow.ToString() + "");
-                }
-                else
-                {
-                    //  MessageBox.Show("No effect to orderLocation row ! " + effRow.ToString() + "");
-                }
-                Center.closeConnection();
-
+                Console.WriteLine($"Start Deleting OrderDetail queries {batchesText}");
+                UpdateProgressLabel(progressLabel, $"Start Deleting OrderDetail queries {batchesText}");
+                var result = await DatabaseHelper.ExecuteNonQueryAsync(deleteQuery);
+                Console.WriteLine($"Done Deleting OrderDetail queries effect row {result}");
+                UpdateProgressLabel(progressLabel, $"Done Deleting OrderDetail queries effect row {result}");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error Deleting Orders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
                 return;
             }
-            int countEffRow = 0;
-            foreach (var order in list_orders)
+
+            int totalRowsInserted = 0;
+            int rowsInserted = 0;
+            var dataTransfer = new DataTransfer();
+
+            // Insert data into tblOrderDetail for each order-batch pair
+            foreach (var (order, batch) in orderBatchPairs)
             {
-                qAll = $@"insert into tblOrderLocation(ProjectName,MasterPlan,PlanNumber,Order_Precut,Order_Set)
-                    select ProjectName,MasterPlan,PlanNumber,Order_Precut,Order_Set
-                    from [10.100.14.85].[ITBIZM].[site].[vw_order_detail] as tbl1
-                    where tbl1.[Order_Precut] = '{order}' ";
+              
                 try
                 {
+                    Console.WriteLine($"Start Inserting OrderDetail queries {batch}");
+                    UpdateProgressLabel(progressLabel, $"Start Inserting OrderDetail queries {batch}");
 
-                    Center.openConnection_WindsorDB();
-                    Center.cmd.CommandText = qAll;
+                    rowsInserted = await dataTransfer.TransferDataAsync(orderNumber: order, batchNumber: batch);
 
-                    int effRow = Center.cmd.ExecuteNonQuery();
-                    if (effRow > 0)
-                    {
-                        // MessageBox.Show("Effect to orderLocation row is " + effRow.ToString() + "");
-                        countEffRow = countEffRow + effRow;
-                    }
-                    else
-                    {
-                        // MessageBox.Show("No effect to orderLocation row ! " + effRow.ToString() + "");
-                    }
-                    Center.closeConnection();
+                    Console.WriteLine($"Done Inserting OrderDetail queries effect row {batch}");
+                    UpdateProgressLabel(progressLabel, $"Done Inserting OrderDetail queries effect row {batch}");
 
+                    totalRowsInserted += rowsInserted;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, $"Error Inserting Order {order} batch {batch}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Hide the ProgressBar
+                    progressBar1.Visible = false;
+                    return;
+                }
+
+            }
+
+            MessageBox.Show($"OrderDetail updated successfully for orders: {string.Join(", ", orderBatchPairs.Select(o => o.OrderNumber))}");
+            MessageBox.Show($"Total rows inserted: {totalRowsInserted}");
+            Center.Location = 3;
+            // Hide the ProgressBar
+            progressBar1.Visible = false;
+        }
+
+        public async Task LocationPrecut_1and2Async()
+        {
+            // Show the ProgressBar
+
+            if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
+            {
+                MessageBox.Show("Put number in Batch_txtbox!", "Frm_PlanningPrecut : Meen P", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                progressBar1.Visible = false;
+                return;
+            }
+
+            // Parse and clean the batches
+            var batchNumbers = txtBatchList.Text.Trim('(', ')').Split(',')
+                                .Select(b => b.Trim())
+                                .ToArray();
+
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
+            {
+                MessageBox.Show("Invalid batch number format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
+                return;
+            }
+
+            // Prepare parameterized query for batch numbers
+            var batchPlaceholders = string.Join(", ", batchNumbers.Select((_, index) => $"@batch{index}"));
+            var batchParameters = new Dictionary<string, object>();
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                batchParameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
+            }
+
+            string queryGetOrders = $@"
+                    SELECT Batch, OrderNumber, COUNT(*)
+                    FROM [ProductionPlan_Table]
+                    WHERE Batch IN ({batchPlaceholders})
+                    GROUP BY Batch, OrderNumber
+                    HAVING COUNT(*) > 1";
+
+            List<(string OrderNumber, string Batch)> orderBatchPairs = new List<(string OrderNumber, string Batch)>();
+
+            try
+            {
+                Console.WriteLine($"Start checking Batch OrderDetail queries {batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Start checking Batch queries {batchNumbers}");
+                // Execute the query and fetch order numbers with their corresponding batches
+                DataTable result = await DatabaseHelper.ExecuteQueryAsync(queryGetOrders, batchParameters, useLinkQv: true);
+
+                Console.WriteLine($"Done checking Batch OrderDetail queries result row {result}");
+                UpdateProgressLabel(progressLabel, $"Done checking Batch OrderDetail queries result  {result}");
+
+                if (result.Rows.Count == 0)
+                {
+                    MessageBox.Show("Error: No orders found.");
+                    return;
+                }
+
+                foreach (DataRow row in result.Rows)
+                {
+                    string orderNumber = row["OrderNumber"].ToString();
+                    string batch = row["Batch"].ToString();
+                    orderBatchPairs.Add((orderNumber, batch));
+                }
+
+                if (orderBatchPairs.Count == 0)
+                {
+                    MessageBox.Show("Error: No orders found.");
                     return;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Fetching Orders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
+                return;
+            }
 
-            MessageBox.Show($"orderLocation Updated completed {orders}");
-            MessageBox.Show("Effect to orderLocation row is " + countEffRow.ToString() + "");
+            // Delete existing records in tblOrderDetail for the fetched orders
+            string deleteQuery = $@"DELETE FROM [tblOrderDetail] WHERE [Order] IN ({string.Join(", ", orderBatchPairs.Select(o => $"'{o.OrderNumber}'"))})";
+            try
+            {
+                Console.WriteLine($"Start Deleting OrderDetail queries {batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Start Deleting OrderDetail queries {batchNumbers}");
+                var result = await DatabaseHelper.ExecuteNonQueryAsync(deleteQuery);
+                Console.WriteLine($"Done Deleting OrderDetail queries effect row {result}");
+                UpdateProgressLabel(progressLabel, $"Done Deleting OrderDetail queries effect row {result}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Deleting Orders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                progressBar1.Visible = false;
+                return;
+            }
+
+            int totalRowsInserted = 0;
+            
+
+            // Insert data into tblOrderDetail for each order-batch pair
+            foreach (var (order, batch) in orderBatchPairs)
+            {
+                string insertQuery = $@"
+                        INSERT INTO [tblOrderDetail] (
+                            [OrderType], [Order], [Batch], [ProjectName], [PlotNumber], [BluePrintName], [ConfirmationDate], 
+                            [System], [Color], [TotalQuantity], [CustomerName], [Position], [Code], [Quantity], [UnitPrice], 
+                            [TotalPrice], [Dimensions], [sfabName], [sfabCodeName], [ProductionNoteDescription], [OtherDescription], [TimeStamp]
+                        )
+                        SELECT 
+                            OrderType, [Order], @batch, ProjectName, PlotNumber, BluePrintName, ConfirmationDate,
+                            [System], Color, TotalQuantity, CustomerName, Position, Code, Quantity, UnitPrice,
+                            TotalPrice, Dimensions, sfabName, sfabCodeName, ProductionNoteDescription, OtherDescription, GETDATE()
+                        FROM [10.100.14.85].[ITBIZM].[site].[e2e_order_detail] AS s
+                        JOIN [10.100.14.85].[ITBIZM].[prefsuite].[e2e_SubModelDetail] AS p ON s.[Order] = p.OrderNumber
+                        JOIN [10.100.14.85].[ITBIZM].[master].[vw_fab_detail] AS f ON s.Manufac_Set = f.sfabName
+                        WHERE s.[Order] = @order";
+
+                var parameters = new Dictionary<string, object>
+                    {
+                        { "@order", order },
+                        { "@batch", batch }
+                    };
+
+                try
+                {
+                    Console.WriteLine($"Start Inserting OrderDetail queries {batchNumbers}");
+                    UpdateProgressLabel(progressLabel, $"Start Inserting OrderDetail queries {batchNumbers}");
+                    int rowsInserted = await DatabaseHelper.ExecuteNonQueryAsync(insertQuery, parameters);
+                    Console.WriteLine($"Done Inserting OrderDetail queries effect row {rowsInserted}");
+                    UpdateProgressLabel(progressLabel, $"Done Inserting OrderDetail queries effect row {rowsInserted}");
+
+                    totalRowsInserted += rowsInserted;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, $"Error Inserting Order {order}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Hide the ProgressBar
+                    progressBar1.Visible = false;
+                    return;
+                }
+                
+            }
+
+            MessageBox.Show($"OrderDetail updated successfully for orders: {string.Join(", ", orderBatchPairs.Select(o => o.OrderNumber))}");
+            MessageBox.Show($"Total rows inserted: {totalRowsInserted}");
+            // Hide the ProgressBar
+            progressBar1.Visible = false;
+
         }
+
+
         private void btn_workingDate_Click(object sender, EventArgs e)
         {
             WorkingDate frm = new WorkingDate();
             frm.Show();
-        
-        }
-
-        private void button_new2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
-            {
-                MessageBox.Show("ใส่ bath ที่ต้องการจะ Search !!");
-                return;
-            }
-
-            if (!NoMissingTable(txtBatchList.Text.Trim()))
-            {
-                MessageBox.Show("ข้อมูล Excel จาก Prepsuit ไม่สมบูรณ์");
-                return;
-            }
-
-            string _inbatch = txtBatchList.Text.Trim();
-            string _plant = "Pre-cut";
-            var _p0 = batchVerify(_inbatch);
-            if (!_p0.complete)
-            {
-                MessageBox.Show(_p0.error);
-                return;
-            }
-            DialogResult _r2 = MessageBox.Show($"ต้องการที่จะเพิ่ม Batch ในโรงผลิต {_plant} ใช่หรือไม่", "Waring",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (_r2 == DialogResult.No)
-                return;
-
-            var _p1 = updateSomeBatch2(_inbatch, _plant);
-
-            if (!_p1.complete)
-            {
-                MessageBox.Show(_p1.error);
-                return;
-            }
-
-            if (_plant == "Pre-cut")
-            {
-                var _p2 = updateCuttingStation2(_inbatch);
-                if (!_p2.complete)
-                {
-                    MessageBox.Show(_p2.error);
-                    return;
-                }
-            }
-            MessageBox.Show("Update Batch Completed");
 
         }
 
-        public (bool complete, string error) updateSomeBatch2(string inBatch, string plant)
-        {
-            bool _complete;
-            string _error;
-            // Deleted Old data
-            string _q;
-            
-            if (plant == "Pre-cut")
-            {
-                
-                _q = $"exec insert_tables '{inBatch}'";
-            }
-            else
-            {
-                _q = $"exec insert_tables '{inBatch}'";
-            }
-
-            try
-            {
-                Center.sql = _q; //1
-                Center.cmd.CommandText = Center.sql; //2
-                Center.openConnection_WindsorDB(); //3
-
-                int effrow = Center.cmd.ExecuteNonQuery();
-
-                if (effrow != -1 && effrow != 0)
-                {
-                    // MessageBox.Show("Update Finish Date: " + inBatch + "Done ! ");
-                    _complete = true;
-                }
-                else if (effrow == 0)
-                {
-                    //MessageBox.Show("No Batch" + inBatch + " to Finish Date Update ! ");
-                    _complete = false;
-                    _error = "No Batch to Finish date Update";
-                }
-                else
-                {
-                    // MessageBox.Show("ERROR Update Finish date process");
-                    _complete = false;
-                    _error = "Error";
-                }
-                _error = "";
-                Center.closeConnection();
-                return (_complete, _error);
-            }
-            catch (Exception ex)
-            {
-                _complete = false;
-                MessageBox.Show(ex.Message);
-                _error = ex.Message;
-            }
-
-
-
-            return (_complete, _error);
-        }
-
-        public (bool complete, string error) updateCuttingStation2(string inBatch)
-        {
-            bool _complete;
-            string _error;
-
-            string q1, q2;
-
-            q1 = $"exec update_cuttinglist_1 {inBatch}";
-            q2 = $"exec update_cuttinglist_2 {inBatch}";
-
-            List<string> querys = new List<string>() { q1, q2};
-            _complete = true;
-            _error = "No Error";
-            // Tiome Out for 15 Min
-
-
-
-            foreach (var query in querys)
-            {
-                try
-                {
-                    Center.openConnection_WindsorDB(); //3
-                    Center.sql = query; //1
-                    Center.cmd.CommandText = Center.sql; //2
-
-
-                    int effrow = Center.cmd.ExecuteNonQuery();
-
-                    if (effrow != -1 && effrow != 0)
-                    {
-                        // MessageBox.Show("Update Finish Date: " + inBatch + "Done ! ");
-                        _complete = true;
-                    }
-                    else if (effrow == 0)
-                    {
-                        //MessageBox.Show("No Batch" + inBatch + " to Finish Date Update ! ");
-                        _complete = false;
-                        _error = "No Batch to Finish date Update";
-                    }
-                    else
-                    {
-                        // MessageBox.Show("ERROR Update Finish date process");
-                        _complete = false;
-                        _error = "Error";
-                    }
-                    _error = "";
-                    Center.closeConnection();
-
-                }
-                catch (Exception ex)
-                {
-                    _complete = false;
-                    _error = ex.Message;
-                    MessageBox.Show(ex.Message + "เกิดปัญหาในการลง Batch " + inBatch + " ให้ Delete แล้วลงใหม่");
-
-
-                    break;
-
-                }
-            }
-            Center.closeConnection();
-
-            return (_complete, _error);
-
-
-        }
-
+        // use foir testing location
         private void button1_Click(object sender, EventArgs e)
         {
             orderLocation();
+        }
+
+        private async void button_CheckOrderData_Click(object sender, EventArgs e)
+        {
+            // Validate input
+            if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a batch number to search!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string batchNumber = txtBatchList.Text.Trim();
+
+            // Parse and clean the input batch numbers
+            var batchNumbers = batchNumber.Trim('(', ')').Split(',')
+                                       .Select(b => b.Trim())
+                                       .ToArray();
+
+            if (!batchNumbers.All(b => int.TryParse(b, out _)))
+            {
+                MessageBox.Show("Invalid batch number format.");
+                return;
+            }
+
+            // Prepare parameterized query with dynamic placeholders for IN clause
+            var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
+            var parameters = new Dictionary<string, object>();
+
+            for (int i = 0; i < batchNumbers.Length; i++)
+            {
+                parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
+            }
+
+            // Define the query
+            string query = $@"SELECT [TblId]
+                            ,[OrderType]
+                            ,[Order]
+                            ,[Batch]
+                            ,[ProjectName]
+                            ,[PlotNumber]
+                            ,[BluePrintName]
+                            ,[ConfirmationDate]
+                            ,[System]
+                            ,[Color]
+                            ,[TotalQuantity]
+                            ,[CustomerName]
+                            ,[Position]
+                            ,[Code]
+                            ,[Quantity]
+                            ,[UnitPrice]
+                            ,[TotalPrice]
+                            ,[Dimensions]
+                            ,[sfabName]
+                            ,[sfabCodeName]
+                            ,[ProductionNoteDescription]
+                            ,[OtherDescription]
+                            ,[TimeStamp]
+                     FROM    [tblOrderDetail]
+                     WHERE [Batch] IN ({placeholders})";
+
+            try
+            {
+                DataTable resultTable = await DatabaseHelper.ExecuteQueryAsync(query, parameters, useLinkQv: false);
+                if (resultTable.Rows.Count > 0)
+                {
+                    // Bind the DataTable to the DataGridView
+                    dataGridView1.DataSource = resultTable;
+                    // Update row count
+                    laRowCount.Text = resultTable.Rows.Count.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No records found for the specified batch numbers.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+    }
+
+
+    public static class Logger
+    {
+        public static void Log(string message, Exception ex = null)
+        {
+            // Implement logging logic, e.g., write to a file or a logging service
+            string logMessage = $"{DateTime.Now}: {message}";
+            if (ex != null)
+            {
+                logMessage += $"\nException: {ex.Message}\nStackTrace: {ex.StackTrace}";
+            }
+            File.AppendAllText("log.txt", logMessage + Environment.NewLine);
+            MessageBox.Show(" logMessage" + Environment.NewLine);
         }
     }
 }

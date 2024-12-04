@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1889194_calendar_financial_financial planning_planning_event_icon.ico</ApplicationIcon>
+    <ApplicationIcon>6634_calendar_date_event_plan_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
@@ -41,6 +41,16 @@
     </Reference>
     <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -61,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Center.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="DataTransfer.cs" />
     <Compile Include="ListtoDataTableConverter.cs" />
     <Compile Include="Opt_cut_testForm.cs">
       <SubType>Form</SubType>
@@ -163,8 +175,10 @@
   <ItemGroup>
     <Content Include="1889194_calendar_financial_financial planning_planning_event_icon.ico" />
     <Content Include="2.ico" />
+    <Content Include="6634_calendar_date_event_plan_icon.ico" />
     <Content Include="6643382_consistant_diet_exercise_fitness_plan_icon.ico" />
     <Content Include="8396425_schedule_calendar_date_time_plan_icon.ico" />
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

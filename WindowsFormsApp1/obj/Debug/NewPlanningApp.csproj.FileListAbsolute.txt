@@ -535,3 +535,30 @@ C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlan
 C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
 C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\OPI\Desktop\1_Planing 11Jan2024 - R0\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.dll
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.pdb
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.xml
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.AssemblyReference.cache
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Opt_cut_testForm.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PlanningPrecut.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductioncapForm.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductionplanForm.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Production_DescriptionForm.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProfileOperationForm.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\MetroFramework.dll
+C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\MetroFramework.Fonts.dll

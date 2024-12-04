@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new PlanningPrecut());
+            // Application.Run(new PlanningPrecut());
              Application.Run(new ProductionplanForm());
             // Application.Run(new ProductioncapForm());
             //  Application.Run(new Opt_cut_testForm());
