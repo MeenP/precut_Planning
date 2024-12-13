@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void PlanningPrecut_Load(object sender, EventArgs e)
         {
-            btn_sOperation.Visible = false;
+            btn_sOperation.Visible = true;
             buttonTestOrderDetail.Visible = true;
             cb_SelectQRcode.Enabled = false;
 
@@ -396,7 +396,7 @@ namespace WindowsFormsApp1
             try
             {
                 Console.WriteLine($"Start Inserting cutting list queries {batchNumbers}");
-                UpdateProgressLabel(progressLabel, $"Start Inserting cutting list queries {batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Start Inserting cutting list queries {inBatch}");
                 // Execute combined query
                int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(combinedQuery, parameters, useLinkQv: false);
 
@@ -492,7 +492,7 @@ namespace WindowsFormsApp1
             try
             {
                 Console.WriteLine($"Executing DELETE queries...{batchNumbers}");
-                UpdateProgressLabel(progressLabel, $"Deleting old batch data...{batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Deleting old batch data...{inBatch}");
 
                 int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qDelete, parameters, useLinkQv: false);
 
@@ -500,7 +500,7 @@ namespace WindowsFormsApp1
                 UpdateProgressLabel(progressLabel, $"Done DELETE queries effect row {rowsAffected}");
 
                 Console.WriteLine("Inserting new batch data...");
-                UpdateProgressLabel(progressLabel, $"Inserting new batch data...{batchNumbers}");
+                UpdateProgressLabel(progressLabel, $"Inserting new batch data...{inBatch}");
                 // Add further queries for insertion if required
                 rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qInsert, parameters, useLinkQv: false);
 
@@ -580,6 +580,7 @@ namespace WindowsFormsApp1
             string _q1 = $"DELETE FROM tblOrderPrefGuest WHERE BatchNo IN ({placeholders});";
             string _q2 = $"DELETE FROM tblOperationList WHERE Batch IN ({placeholders});";
             string _q3 = $"DELETE FROM tblCuttingLists WHERE Batch IN ({placeholders});";
+            string _q4 = $"DELETE FROM [tblOrderDetail] WHERE Batch IN ({placeholders});";
 
             try
             {
@@ -587,8 +588,9 @@ namespace WindowsFormsApp1
                 await DatabaseHelper.ExecuteNonQueryAsync(_q1, parameters);
                 await DatabaseHelper.ExecuteNonQueryAsync(_q2, parameters);
                 await DatabaseHelper.ExecuteNonQueryAsync(_q3, parameters);
+                await DatabaseHelper.ExecuteNonQueryAsync(_q4, parameters);
 
-                return (true, "Batch deletion completed successfully.");
+                return (true, $"Batch {parameters} deletion completed successfully.");
             }
             catch (Exception ex)
             {
@@ -1101,8 +1103,8 @@ namespace WindowsFormsApp1
 
         private void btn_sOperation_Click(object sender, EventArgs e)
         {
-            //sRout();
-            //sDrill();
+            sRout();
+            sDrill();
             // for test Precut
             orderLocation();
             //----

@@ -172,35 +172,127 @@ namespace WindowsFormsApp1
             // Get data From Excel Table Which insert indata grid view
 
             List<string> inBatch = new List<string>();
-            int x = 0;
 
-            int sortOrder=0;
-            int productionSet=0;
+            //int sortOrder;
+            //int productionSet;
+            //int subModel;
+            //int productionSetInstance;
+            //int prodCamPieceAbsolutePieceNumber;
+            //for (int i = 0; i < dataGridViewSQL.Rows.Count - 1; i++)
+            //{
+            //    string row = dataGridViewSQL.Rows[i].Cells[3].Value.ToString();
+            //    string _sortOrder = dataGridViewSQL.Rows[i].Cells[2].Value.ToString();//Posion
+            //    string _productionSet = dataGridViewSQL.Rows[i].Cells[4].Value.ToString(); // Subbatch
+
+            //    string _subModel = dataGridViewSQL.Rows[i].Cells[24].Value.ToString(); // Subpostiion 
+            //    string _productionSetInstance = dataGridViewSQL.Rows[i].Cells[22].Value.ToString(); // PositionID 
+            //    string _prodCamPieceAbsolutePieceNumber = dataGridViewSQL.Rows[i].Cells[20].Value.ToString(); // PositionID 
+            //    string _concepto = dataGridViewSQL.Rows[i].Cells["Concepto"].ToString().Trim();
+
+            //    Int32.TryParse(_sortOrder,out sortOrder);
+            //    Int32.TryParse(_productionSet,out productionSet);
+
+            //    Int32.TryParse(_subModel, out subModel);
+            //    Int32.TryParse(_productionSetInstance, out productionSetInstance);
+            //    Int32.TryParse(_prodCamPieceAbsolutePieceNumber, out prodCamPieceAbsolutePieceNumber);
+
+            //    if (sortOrder>=100)
+            //    {
+            //        MessageBox.Show($"sortOrder >= {sortOrder} must less than 100 error !");
+            //        return;
+            //    }
+
+            //    if (productionSet >= 10)
+            //    {
+            //        MessageBox.Show($"productionSet >= {productionSet} must less than 10 error !");
+            //        return;
+            //    }
+            //    // new rule
+            //    if (subModel >= 10)
+            //    {
+            //        MessageBox.Show($"subModel >= {subModel} must less than 10 error !");
+            //        return;
+            //    }
+            //    if (productionSetInstance >= 100)
+            //    {
+            //        MessageBox.Show($"sortOrder >= {productionSetInstance} must less than 100 error !");
+            //        return;
+            //    }
+            //    if (prodCamPieceAbsolutePieceNumber >= 1000)
+            //    {
+            //        MessageBox.Show($"sortOrder >= {prodCamPieceAbsolutePieceNumber} must less than 1000 error !");
+            //        return;
+            //    }
+
+            //    if (_concepto.Length > 10)
+            //    {
+            //        _concepto = _concepto.Substring(0, 10); // Keep only the first 10 characters
+            //        dataGridViewSQL.Rows[i].Cells["Concepto"].Value = _concepto;
+            //    }
+
+
+            //    inBatch.Add(row);
+
+            //}
+
+            int iden = 0;
+
 
             for (int i = 0; i < dataGridViewSQL.Rows.Count - 1; i++)
             {
                 string row = dataGridViewSQL.Rows[i].Cells[3].Value.ToString();
-                string _sortOrder = dataGridViewSQL.Rows[i].Cells[2].Value.ToString();
-                string _productionSet = dataGridViewSQL.Rows[i].Cells[4].Value.ToString();
+                string _sortOrder = dataGridViewSQL.Rows[i].Cells[2].Value.ToString(); // Position
+                string _productionSet = dataGridViewSQL.Rows[i].Cells[4].Value.ToString(); // Subbatch
+                string _subModel = dataGridViewSQL.Rows[i].Cells[24].Value.ToString(); // Subposition
+                string _productionSetInstance = dataGridViewSQL.Rows[i].Cells[22].Value.ToString(); // PositionID
+                string _prodCamPieceAbsolutePieceNumber = dataGridViewSQL.Rows[i].Cells[20].Value.ToString(); // PcsID
+                string _concepto = dataGridViewSQL.Rows[i].Cells[23].Value?.ToString().Trim() ?? string.Empty; // Customer code
 
-               Int32.TryParse(_sortOrder,out sortOrder);
-               Int32.TryParse(_productionSet,out productionSet);
-                if (sortOrder>=100)
+                
+
+                if (!Int32.TryParse(_sortOrder, out int sortOrder) || sortOrder >= 100)
                 {
-                    MessageBox.Show($"sortOrder >= {sortOrder}  error !");
+                    MessageBox.Show($"SortOrder '{_sortOrder}' must be a valid integer less than 100!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (productionSet >= 10)
+                if (!Int32.TryParse(_productionSet, out int productionSet) || productionSet >= 10)
                 {
-                    MessageBox.Show($"productionSet >= {productionSet}  error !");
+                    MessageBox.Show($"ProductionSet '{_productionSet}' must be a valid integer less than 10!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                  
+                }
+
+                if (!Int32.TryParse(_subModel, out int subModel) || subModel >= 10)
+                {
+                    //MessageBox.Show($"SubModel '{_subModel}' must be a valid integer less than 10!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //return;
+                    dataGridViewSQL.Rows[i].Cells[24].Value = 9; // Update the cell value
+                }
+
+                if (!Int32.TryParse(_productionSetInstance, out int productionSetInstance) || productionSetInstance >= 100)
+                {
+                    MessageBox.Show($"ProductionSetInstance '{_productionSetInstance}' must be a valid integer less than 100!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                if (!Int32.TryParse(_prodCamPieceAbsolutePieceNumber, out int prodCamPieceAbsolutePieceNumber) || prodCamPieceAbsolutePieceNumber >= 1000)
+                {
+                    MessageBox.Show($"ProdCamPieceAbsolutePieceNumber '{_prodCamPieceAbsolutePieceNumber}' must be a valid integer less than 1000!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Truncate Concepto if it exceeds 10 characters
+                if (_concepto.Length > 10)
+                {
+                    _concepto = _concepto.Substring(0, 10);
+                    dataGridViewSQL.Rows[i].Cells[23].Value = _concepto; // Update the cell value
+                }
 
                 inBatch.Add(row);
-
             }
+
+
             var result = string.Join(",", inBatch);
             var batchs = "(" + result + ")";
             var _q = $"SELECT [ProductionLot], COUNT(*)  FROM [LinkQV].[dbo].[Opt_Cut_test_Table]  Where ProductionLot in {batchs}  GROUP BY ProductionLot  HAVING COUNT(*) > 0";
