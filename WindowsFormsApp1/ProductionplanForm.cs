@@ -553,7 +553,7 @@ namespace WindowsFormsApp1
             {
                 return;
             }
-            DialogResult s = MessageBox.Show("เปลี่ยนเป็นใช้ internet นอก และ ต่อ Zero Tier Connection?", "Confirmation",
+            DialogResult s = MessageBox.Show("ใช้ SCG connect ?", "Confirmation",
               MessageBoxButtons.YesNo);
             if (s == DialogResult.No)
             {

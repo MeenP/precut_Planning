@@ -734,7 +734,7 @@ namespace WindowsFormsApp1
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PlanningPrecut";
-            this.Text = "PlanningPrecut _Mp 4Dec2024 :: new Sticker barcode ";
+            this.Text = "PlanningPrecut  25Jul2025 ::  duplicate check";
             this.Load += new System.EventHandler(this.PlanningPrecut_Load);
             this.metroPanelProgressChecking.ResumeLayout(false);
             this.metroPanelProgressChecking.PerformLayout();

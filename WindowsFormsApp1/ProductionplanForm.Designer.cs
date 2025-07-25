@@ -36,22 +36,6 @@
             this.txtFilename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewSQL = new System.Windows.Forms.DataGridView();
-            this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productionLineNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planFinishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actualStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actualFinishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cycleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.framesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sashesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mullionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.squaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.glassesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productionplanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnImport = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.laRowCount = new System.Windows.Forms.Label();
@@ -74,9 +58,25 @@
             this.line3TAndTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_Identity = new System.Windows.Forms.Label();
             this.btn_ProductionDescription = new System.Windows.Forms.Button();
+            this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productionLineNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planFinishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualFinishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cycleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.framesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sashesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mullionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.squaresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.glassesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productionplanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSQL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productionplanBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productionplanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBrows
@@ -158,145 +158,6 @@
             this.dataGridViewSQL.RowHeadersWidth = 51;
             this.dataGridViewSQL.Size = new System.Drawing.Size(1751, 622);
             this.dataGridViewSQL.TabIndex = 6;
-            // 
-            // orderNumberDataGridViewTextBoxColumn
-            // 
-            this.orderNumberDataGridViewTextBoxColumn.DataPropertyName = "OrderNumber";
-            this.orderNumberDataGridViewTextBoxColumn.HeaderText = "OrderNumber";
-            this.orderNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderNumberDataGridViewTextBoxColumn.Name = "orderNumberDataGridViewTextBoxColumn";
-            this.orderNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.orderNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // batchDataGridViewTextBoxColumn
-            // 
-            this.batchDataGridViewTextBoxColumn.DataPropertyName = "Batch";
-            this.batchDataGridViewTextBoxColumn.HeaderText = "Batch";
-            this.batchDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.batchDataGridViewTextBoxColumn.Name = "batchDataGridViewTextBoxColumn";
-            this.batchDataGridViewTextBoxColumn.ReadOnly = true;
-            this.batchDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productionLineNameDataGridViewTextBoxColumn
-            // 
-            this.productionLineNameDataGridViewTextBoxColumn.DataPropertyName = "ProductionLineName";
-            this.productionLineNameDataGridViewTextBoxColumn.HeaderText = "ProductionLineName";
-            this.productionLineNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productionLineNameDataGridViewTextBoxColumn.Name = "productionLineNameDataGridViewTextBoxColumn";
-            this.productionLineNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productionLineNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // planStartDataGridViewTextBoxColumn
-            // 
-            this.planStartDataGridViewTextBoxColumn.DataPropertyName = "Plan_Start";
-            this.planStartDataGridViewTextBoxColumn.HeaderText = "Plan_Start";
-            this.planStartDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.planStartDataGridViewTextBoxColumn.Name = "planStartDataGridViewTextBoxColumn";
-            this.planStartDataGridViewTextBoxColumn.ReadOnly = true;
-            this.planStartDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // planFinishDataGridViewTextBoxColumn
-            // 
-            this.planFinishDataGridViewTextBoxColumn.DataPropertyName = "Plan_Finish";
-            this.planFinishDataGridViewTextBoxColumn.HeaderText = "Plan_Finish";
-            this.planFinishDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.planFinishDataGridViewTextBoxColumn.Name = "planFinishDataGridViewTextBoxColumn";
-            this.planFinishDataGridViewTextBoxColumn.ReadOnly = true;
-            this.planFinishDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // actualStartDataGridViewTextBoxColumn
-            // 
-            this.actualStartDataGridViewTextBoxColumn.DataPropertyName = "Actual_Start";
-            this.actualStartDataGridViewTextBoxColumn.HeaderText = "Actual_Start";
-            this.actualStartDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.actualStartDataGridViewTextBoxColumn.Name = "actualStartDataGridViewTextBoxColumn";
-            this.actualStartDataGridViewTextBoxColumn.ReadOnly = true;
-            this.actualStartDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // actualFinishDataGridViewTextBoxColumn
-            // 
-            this.actualFinishDataGridViewTextBoxColumn.DataPropertyName = "Actual_Finish";
-            this.actualFinishDataGridViewTextBoxColumn.HeaderText = "Actual_Finish";
-            this.actualFinishDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.actualFinishDataGridViewTextBoxColumn.Name = "actualFinishDataGridViewTextBoxColumn";
-            this.actualFinishDataGridViewTextBoxColumn.ReadOnly = true;
-            this.actualFinishDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // capDataGridViewTextBoxColumn
-            // 
-            this.capDataGridViewTextBoxColumn.DataPropertyName = "Cap";
-            this.capDataGridViewTextBoxColumn.HeaderText = "Cap";
-            this.capDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.capDataGridViewTextBoxColumn.Name = "capDataGridViewTextBoxColumn";
-            this.capDataGridViewTextBoxColumn.ReadOnly = true;
-            this.capDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cycleDataGridViewTextBoxColumn
-            // 
-            this.cycleDataGridViewTextBoxColumn.DataPropertyName = "Cycle";
-            this.cycleDataGridViewTextBoxColumn.HeaderText = "Cycle";
-            this.cycleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cycleDataGridViewTextBoxColumn.Name = "cycleDataGridViewTextBoxColumn";
-            this.cycleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cycleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // unitDataGridViewTextBoxColumn
-            // 
-            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
-            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
-            this.unitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
-            this.unitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unitDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // framesDataGridViewTextBoxColumn
-            // 
-            this.framesDataGridViewTextBoxColumn.DataPropertyName = "Frames";
-            this.framesDataGridViewTextBoxColumn.HeaderText = "Frames";
-            this.framesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.framesDataGridViewTextBoxColumn.Name = "framesDataGridViewTextBoxColumn";
-            this.framesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.framesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sashesDataGridViewTextBoxColumn
-            // 
-            this.sashesDataGridViewTextBoxColumn.DataPropertyName = "Sashes";
-            this.sashesDataGridViewTextBoxColumn.HeaderText = "Sashes";
-            this.sashesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sashesDataGridViewTextBoxColumn.Name = "sashesDataGridViewTextBoxColumn";
-            this.sashesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sashesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // mullionsDataGridViewTextBoxColumn
-            // 
-            this.mullionsDataGridViewTextBoxColumn.DataPropertyName = "Mullions";
-            this.mullionsDataGridViewTextBoxColumn.HeaderText = "Mullions";
-            this.mullionsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mullionsDataGridViewTextBoxColumn.Name = "mullionsDataGridViewTextBoxColumn";
-            this.mullionsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mullionsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // squaresDataGridViewTextBoxColumn
-            // 
-            this.squaresDataGridViewTextBoxColumn.DataPropertyName = "Squares";
-            this.squaresDataGridViewTextBoxColumn.HeaderText = "Squares";
-            this.squaresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.squaresDataGridViewTextBoxColumn.Name = "squaresDataGridViewTextBoxColumn";
-            this.squaresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.squaresDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // glassesDataGridViewTextBoxColumn
-            // 
-            this.glassesDataGridViewTextBoxColumn.DataPropertyName = "Glasses";
-            this.glassesDataGridViewTextBoxColumn.HeaderText = "Glasses";
-            this.glassesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.glassesDataGridViewTextBoxColumn.Name = "glassesDataGridViewTextBoxColumn";
-            this.glassesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.glassesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productionplanBindingSource
-            // 
-            this.productionplanBindingSource.DataSource = typeof(WindowsFormsApp1.productionplan);
             // 
             // btnImport
             // 
@@ -532,6 +393,145 @@
             this.btn_ProductionDescription.UseVisualStyleBackColor = false;
             this.btn_ProductionDescription.Click += new System.EventHandler(this.btn_ProductionDescription_Click);
             // 
+            // orderNumberDataGridViewTextBoxColumn
+            // 
+            this.orderNumberDataGridViewTextBoxColumn.DataPropertyName = "OrderNumber";
+            this.orderNumberDataGridViewTextBoxColumn.HeaderText = "OrderNumber";
+            this.orderNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.orderNumberDataGridViewTextBoxColumn.Name = "orderNumberDataGridViewTextBoxColumn";
+            this.orderNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.orderNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // batchDataGridViewTextBoxColumn
+            // 
+            this.batchDataGridViewTextBoxColumn.DataPropertyName = "Batch";
+            this.batchDataGridViewTextBoxColumn.HeaderText = "Batch";
+            this.batchDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.batchDataGridViewTextBoxColumn.Name = "batchDataGridViewTextBoxColumn";
+            this.batchDataGridViewTextBoxColumn.ReadOnly = true;
+            this.batchDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productionLineNameDataGridViewTextBoxColumn
+            // 
+            this.productionLineNameDataGridViewTextBoxColumn.DataPropertyName = "ProductionLineName";
+            this.productionLineNameDataGridViewTextBoxColumn.HeaderText = "ProductionLineName";
+            this.productionLineNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productionLineNameDataGridViewTextBoxColumn.Name = "productionLineNameDataGridViewTextBoxColumn";
+            this.productionLineNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productionLineNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // planStartDataGridViewTextBoxColumn
+            // 
+            this.planStartDataGridViewTextBoxColumn.DataPropertyName = "Plan_Start";
+            this.planStartDataGridViewTextBoxColumn.HeaderText = "Plan_Start";
+            this.planStartDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.planStartDataGridViewTextBoxColumn.Name = "planStartDataGridViewTextBoxColumn";
+            this.planStartDataGridViewTextBoxColumn.ReadOnly = true;
+            this.planStartDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // planFinishDataGridViewTextBoxColumn
+            // 
+            this.planFinishDataGridViewTextBoxColumn.DataPropertyName = "Plan_Finish";
+            this.planFinishDataGridViewTextBoxColumn.HeaderText = "Plan_Finish";
+            this.planFinishDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.planFinishDataGridViewTextBoxColumn.Name = "planFinishDataGridViewTextBoxColumn";
+            this.planFinishDataGridViewTextBoxColumn.ReadOnly = true;
+            this.planFinishDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // actualStartDataGridViewTextBoxColumn
+            // 
+            this.actualStartDataGridViewTextBoxColumn.DataPropertyName = "Actual_Start";
+            this.actualStartDataGridViewTextBoxColumn.HeaderText = "Actual_Start";
+            this.actualStartDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.actualStartDataGridViewTextBoxColumn.Name = "actualStartDataGridViewTextBoxColumn";
+            this.actualStartDataGridViewTextBoxColumn.ReadOnly = true;
+            this.actualStartDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // actualFinishDataGridViewTextBoxColumn
+            // 
+            this.actualFinishDataGridViewTextBoxColumn.DataPropertyName = "Actual_Finish";
+            this.actualFinishDataGridViewTextBoxColumn.HeaderText = "Actual_Finish";
+            this.actualFinishDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.actualFinishDataGridViewTextBoxColumn.Name = "actualFinishDataGridViewTextBoxColumn";
+            this.actualFinishDataGridViewTextBoxColumn.ReadOnly = true;
+            this.actualFinishDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // capDataGridViewTextBoxColumn
+            // 
+            this.capDataGridViewTextBoxColumn.DataPropertyName = "Cap";
+            this.capDataGridViewTextBoxColumn.HeaderText = "Cap";
+            this.capDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.capDataGridViewTextBoxColumn.Name = "capDataGridViewTextBoxColumn";
+            this.capDataGridViewTextBoxColumn.ReadOnly = true;
+            this.capDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cycleDataGridViewTextBoxColumn
+            // 
+            this.cycleDataGridViewTextBoxColumn.DataPropertyName = "Cycle";
+            this.cycleDataGridViewTextBoxColumn.HeaderText = "Cycle";
+            this.cycleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cycleDataGridViewTextBoxColumn.Name = "cycleDataGridViewTextBoxColumn";
+            this.cycleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cycleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // unitDataGridViewTextBoxColumn
+            // 
+            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
+            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            this.unitDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unitDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // framesDataGridViewTextBoxColumn
+            // 
+            this.framesDataGridViewTextBoxColumn.DataPropertyName = "Frames";
+            this.framesDataGridViewTextBoxColumn.HeaderText = "Frames";
+            this.framesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.framesDataGridViewTextBoxColumn.Name = "framesDataGridViewTextBoxColumn";
+            this.framesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.framesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sashesDataGridViewTextBoxColumn
+            // 
+            this.sashesDataGridViewTextBoxColumn.DataPropertyName = "Sashes";
+            this.sashesDataGridViewTextBoxColumn.HeaderText = "Sashes";
+            this.sashesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sashesDataGridViewTextBoxColumn.Name = "sashesDataGridViewTextBoxColumn";
+            this.sashesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sashesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mullionsDataGridViewTextBoxColumn
+            // 
+            this.mullionsDataGridViewTextBoxColumn.DataPropertyName = "Mullions";
+            this.mullionsDataGridViewTextBoxColumn.HeaderText = "Mullions";
+            this.mullionsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mullionsDataGridViewTextBoxColumn.Name = "mullionsDataGridViewTextBoxColumn";
+            this.mullionsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mullionsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // squaresDataGridViewTextBoxColumn
+            // 
+            this.squaresDataGridViewTextBoxColumn.DataPropertyName = "Squares";
+            this.squaresDataGridViewTextBoxColumn.HeaderText = "Squares";
+            this.squaresDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.squaresDataGridViewTextBoxColumn.Name = "squaresDataGridViewTextBoxColumn";
+            this.squaresDataGridViewTextBoxColumn.ReadOnly = true;
+            this.squaresDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // glassesDataGridViewTextBoxColumn
+            // 
+            this.glassesDataGridViewTextBoxColumn.DataPropertyName = "Glasses";
+            this.glassesDataGridViewTextBoxColumn.HeaderText = "Glasses";
+            this.glassesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.glassesDataGridViewTextBoxColumn.Name = "glassesDataGridViewTextBoxColumn";
+            this.glassesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.glassesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productionplanBindingSource
+            // 
+            this.productionplanBindingSource.DataSource = typeof(WindowsFormsApp1.productionplan);
+            // 
             // ProductionplanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,12 +565,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductionplanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Productionplan_Upload :: Mp :: 4 Dec 2024";
+            this.Text = "Productionplan_Upload :: Mp :: 25  Jul 2025";
             this.Load += new System.EventHandler(this.Productionplan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSQL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productionplanBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productionplanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

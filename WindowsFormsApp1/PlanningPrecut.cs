@@ -63,37 +63,81 @@ namespace WindowsFormsApp1
             }
         }
 
+        //private async void btSearch_Click(object sender, EventArgs e)
+        //{
+
+        //    if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
+        //    {
+        //        MessageBox.Show("ใส่ bath ที่ต้องการจะ Search !!");
+        //        return;
+        //    }
+        //    string _inbatch = txtBatchList.Text.Trim();
+
+        //    var _p0 = batchVerify(_inbatch);
+        //    if (!_p0.Success)
+        //    {
+        //        MessageBox.Show(_p0.Error);
+        //        return;
+        //    }
+
+        //    var _p1 = await searchBatchInDbAsync(_inbatch, false);
+
+        //    string _msgs = "";
+
+        //    for (int i = 0; i < _p0.batch.Count; i++)
+        //    {
+        //        int _d = _p1.batch.IndexOf(_p0.batch[i]);
+        //        string _plant = (_d == -1) ? "Nodata" : (_p1.feb2[_d]) ? "Pre - Cut" : "Feb1";
+        //        // (Condition) ?   Yes do : No do (Condition) ? Yes Do : No Do 
+        //        // string _plant = (_d == -1) ? "Nodata" : (false) ? "Pre - Cut" : "Feb1"; 
+        //        _msgs = _msgs + $"Batch:{_p0.batch[i]} => {_plant}" + Environment.NewLine;
+        //    }
+        //    MessageBox.Show(_msgs);
+        //}
+
         private async void btSearch_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
+            // 1) Read and verify
+            var raw = txtBatchList.Text.Trim();
+            if (string.IsNullOrWhiteSpace(raw))
             {
-                MessageBox.Show("ใส่ bath ที่ต้องการจะ Search !!");
-                return;
-            }
-            string _inbatch = txtBatchList.Text.Trim();
-
-            var _p0 = batchVerify(_inbatch);
-            if (!_p0.complete)
-            {
-                MessageBox.Show(_p0.error);
+                MessageBox.Show("ใส่ batch ที่ต้องการจะ Search !!");
                 return;
             }
 
-            var _p1 = await searchBatchInDbAsync(_inbatch, false);
-
-            string _msgs = "";
-
-            for (int i = 0; i < _p0.batch.Count; i++)
+            var (success, error, batches) = batchVerify(raw);
+            if (!success)
             {
-                int _d = _p1.batch.IndexOf(_p0.batch[i]);
-                string _plant = (_d == -1) ? "Nodata" : (_p1.feb2[_d]) ? "Pre - Cut" : "Feb1";
-                // (Condition) ?   Yes do : No do (Condition) ? Yes Do : No Do 
-                // string _plant = (_d == -1) ? "Nodata" : (false) ? "Pre - Cut" : "Feb1"; 
-                _msgs = _msgs + $"Batch:{_p0.batch[i]} => {_plant}" + Environment.NewLine;
+                MessageBox.Show(error, "Invalid Batch List", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            MessageBox.Show(_msgs);
+
+            // 2) Query the database
+            var (dbBatches, feb2Flags) = await searchBatchInDbAsync(raw, false);
+
+            // 3) Build the result message
+            var sb = new StringBuilder();
+            foreach (var batchStr in batches)
+            {
+                if (!int.TryParse(batchStr, out var batchNum))
+                {
+                    sb.AppendLine($"Batch:{batchStr} => Invalid format");
+                    continue;
+                }
+
+                // find index in the DB result
+                var idx = dbBatches.IndexOf(batchNum);
+                string plant = idx == -1
+                    ? "Nodata"
+                    : (feb2Flags[idx] ? "Pre - Cut" : "Feb1");
+
+                sb.AppendLine($"Batch:{batchNum} => {plant}");
+            }
+
+            // 4) Show it
+            MessageBox.Show(sb.ToString(), "Search Results");
         }
+
 
         private bool NoMissingTable(string batches)
         {
@@ -115,6 +159,10 @@ namespace WindowsFormsApp1
                 Center.sql = qAll;
                 Center.cmd.CommandText = Center.sql;
                 Center.openConnection_LinkQvDB();
+                Console.WriteLine("Connected to: " + Center.con.Database);
+                Center.cmd.Connection = Center.con;
+                Center.cmd.CommandText = qAll;
+
                 Center.data_reader = Center.cmd.ExecuteReader();
 
                 while (Center.data_reader.Read())
@@ -179,74 +227,169 @@ namespace WindowsFormsApp1
 
             progressBar1.Style = ProgressBarStyle.Marquee;
             progressBar1.Visible = true;
+            string raw = txtBatchList.Text.Trim();
 
-            if (string.IsNullOrEmpty(txtBatchList.Text.Trim()))
+            if (string.IsNullOrEmpty(raw))
             {
-                MessageBox.Show("ใส่ bath ที่ต้องการจะ Search !!");
+                MessageBox.Show("ใส่ batch ที่ต้องการจะ Search !!");
+                progressBar1.Visible = false;
                 return;
             }
 
-            if (!NoMissingTable(txtBatchList.Text.Trim()))
+            if (!NoMissingTable(raw))
             {
                 MessageBox.Show("ข้อมูล Excel จาก Prepsuit ไม่สมบูรณ์");
-                return;
-            }
-
-            string _inbatch = txtBatchList.Text.Trim();
-            string _plant = "Pre-cut";
-            var _p0 = batchVerify(_inbatch);
-            if (!_p0.complete)
-            {
-                MessageBox.Show(_p0.error);
-                progressBar1.Visible = false;
-                return;
-            }
-            DialogResult _r2 = MessageBox.Show($"ต้องการที่จะเพิ่ม Batch ในโรงผลิต {_plant} ใช่หรือไม่", "Waring",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (_r2 == DialogResult.No)
-                return;
-            // #1 
-            var result = await updateSomeBatchAsync(_inbatch, _plant);
-            if (!result.complete)
-            {
-                Console.WriteLine($"Error: {result.error}");
-                progressBar1.Visible = false;
-            }
-            else
-            {
-                Console.WriteLine("Batch update completed successfully.");
-            }
-
-            if (!result.complete)
-            {
-                MessageBox.Show(result.error);
                 progressBar1.Visible = false;
                 return;
             }
 
-
-            // #2
-            if (_plant == "Pre-cut")
+            // ① parse & verify
+            var verify = batchVerify(raw);
+            if (!verify.Success)
             {
+                MessageBox.Show(verify.Error);
+                progressBar1.Visible = false;
+                return;
+            }
 
-                var _p2 = await updateCuttingStationAsync(_inbatch);
-                if (!_p2.complete)
+            // ② check for duplicates
+            var existing = await GetExistingBatchesAsync(raw);
+            if (existing.Count > 0)
+            {
+                var msg = $"Batch(s) already in system: {string.Join(", ", existing)}.\nOverwrite?";
+                var ok = MessageBox.Show(msg, "Duplicate Batches please deleted first", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (ok == DialogResult.No)
                 {
-                    MessageBox.Show(_p2.error);
                     progressBar1.Visible = false;
                     return;
                 }
             }
-            MessageBox.Show($"Update Batch Completed {_inbatch}");
+
+
+            // ③ confirmation of intent
+            const string plant = "Pre-cut";
+            var confirm = MessageBox.Show(
+                $"ต้องการที่จะเพิ่ม Batch ในโรงผลิต {plant} ใช่หรือไม่",
+                "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2
+            );
+            if (confirm == DialogResult.No)
+            {
+                progressBar1.Visible = false;
+                return;
+            }
+
+            // ④ do the update
+            var result = await updateSomeBatchAsync(raw, plant);
+            if (!result.complete)
+            {
+                MessageBox.Show($"Error updating batch: {result.error}", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Roll back: delete whatever got partially inserted
+                var del = await DeleteBatchAsync(raw);
+                if (!del.complete)
+                    MessageBox.Show($"Also failed to delete batch after error: {del.error}", "Cleanup Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                progressBar1.Visible = false;
+
+                MessageBox.Show($"Delete Batch {raw} Completed");
+
+
+                return;
+            }
+
+            // ⑤ additional Pre-cut logic
+            var cutResult = await updateCuttingStationAsync(raw);
+            if (!cutResult.complete)
+            {
+                MessageBox.Show($"Error updating cutting station: {cutResult.error}", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Roll back the entire batch
+                var del = await DeleteBatchAsync(raw);
+                if (!del.complete)
+                    MessageBox.Show($"Also failed to delete batch after error: {del.error}", "Cleanup Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                progressBar1.Visible = false;
+
+
+                MessageBox.Show($"Delete Batch {raw} Completed");
+
+                return;
+
+            }
+
+            MessageBox.Show($"Update Batch Completed ลงแผนสมบูรณ์ {raw}");
+            orderLocation();
             //await Task.Delay(1000);
             // Perform sRout sDrill and location barcode
 
             //btn_sOperation.PerformClick();
             // Hide the ProgressBar
-            orderLocation();
+           // orderLocation();
 
 
         }
+
+
+        private async Task<List<int>> GetExistingBatchesAsync(string rawBatches)
+        {
+            // parse "(123,456)" → ["123","456"]
+            var batchStrings = rawBatches.Trim('(', ')').Split(',')
+                                         .Select(s => s.Trim()).ToArray();
+
+            // build "@b0,@b1,…" and parameters dict
+            var placeholders = string.Join(", ", batchStrings.Select((_, i) => $"@b{i}"));
+            var parameters = batchStrings
+                .Select((s, i) => new { Key = $"@b{i}", Value = int.Parse(s) })
+                .ToDictionary(x => x.Key, x => (object)x.Value);
+
+            // query the main table where you track batches
+            string sql = $@"
+        SELECT DISTINCT BatchNo 
+          FROM tblOrderPrefGuest 
+         WHERE BatchNo IN ({placeholders})";
+
+            // you can use your existing helper
+            var dt = await DatabaseHelper.ExecuteQueryAsync(sql, parameters, useLinkQv: false);
+
+            // extract ints
+            return dt.Rows
+                     .Cast<DataRow>()
+                     .Select(r => Convert.ToInt32(r["BatchNo"]))
+                     .ToList();
+        }
+        /// <summary>
+        /// Parses a batch list of the form "(123,456,789)" into individual strings,
+        /// verifying only that each piece is an integer.
+        /// </summary>
+        /// <returns>
+        /// Success:    true if every element parsed as an int  
+        /// Error:      non-empty if Success == false  
+        /// Batches:    list of batch strings (empty if error)  
+        /// </returns>
+        private (bool Success, string Error, List<string> Batches) batchVerify(string rawInput)
+        {
+            var batches = new List<string>();
+
+            if (string.IsNullOrWhiteSpace(rawInput))
+                return (false, "Batch list cannot be empty.", batches);
+
+            // strip parentheses and split
+            var items = rawInput
+                .Trim()
+                .TrimStart('(')
+                .TrimEnd(')')
+                .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => s.Trim());
+
+            foreach (var item in items)
+            {
+                if (!int.TryParse(item, out _))
+                    return (false, $"Invalid batch number: '{item}'.", new List<string>());
+                batches.Add(item);
+            }
+
+            return (true, string.Empty, batches);
+        }
+
 
         public async Task<(bool complete, string error)> updateCuttingStationAsync(string inBatch)
         {
@@ -267,6 +410,7 @@ namespace WindowsFormsApp1
             // Prepare parameters for the IN clause
             var placeholders = string.Join(", ", batchNumbers.Select((_, i) => $"@batch{i}"));
             var parameters = new Dictionary<string, object>();
+
             for (int i = 0; i < batchNumbers.Length; i++)
             {
                 parameters.Add($"@batch{i}", int.Parse(batchNumbers[i]));
@@ -382,7 +526,7 @@ namespace WindowsFormsApp1
                         UPDATE tblCuttingLists 
                         SET sDrill = 1 
                         WHERE Batch IN ({placeholders}) AND MatType IN ('01 Frames','02 Sashes') AND EXISTS (
-                            SELECT 1 
+                            SELECT 1  
                             FROM tblOperationList AS tbl2
                             INNER JOIN tblMatcodeMatching AS tbm ON tblCuttingLists.MatCode COLLATE Thai_CI_AS = tbm.SubMatcode COLLATE Thai_CI_AS
                             INNER JOIN tblOperationPattern AS tbl3 ON tbl2.OperationId = tbl3.OperationId 
@@ -398,16 +542,26 @@ namespace WindowsFormsApp1
                 Console.WriteLine($"Start Inserting cutting list queries {batchNumbers}");
                 UpdateProgressLabel(progressLabel, $"Start Inserting cutting list queries {inBatch}");
                 // Execute combined query
-               int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(combinedQuery, parameters, useLinkQv: false);
+                //int rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(combinedQuery, parameters, useLinkQv: false);
+
+                // guaranteed all-or-nothing: 9 May 2025
+                int rowsAffected = await DatabaseHelper.ExecuteNonQueryWithTransactionAsync(combinedQuery, parameters, useLinkQv: false);
 
                 Console.WriteLine($"Done Inserting queries effect row {rowsAffected}");
                 UpdateProgressLabel(progressLabel, $"Done Inserting queries effect row {rowsAffected}");
+
+                if (rowsAffected == 0)
+                {
+                    Console.WriteLine("Warning: No rows were updated.");
+                    UpdateProgressLabel(progressLabel, "Warning: No rows were updated.");
+                }
 
             }
             catch (Exception ex)
             {
                 _complete = false;
-                _error = ex.Message;
+                //_error = ex.Message;
+                _error = $"{ex.Message}\n{ex.StackTrace}";
                 Logger.Log("Error in updateCuttingStation", ex); // Replace with your logging mechanism
             }
 
@@ -501,8 +655,9 @@ namespace WindowsFormsApp1
 
                 Console.WriteLine("Inserting new batch data...");
                 UpdateProgressLabel(progressLabel, $"Inserting new batch data...{inBatch}");
-                // Add further queries for insertion if required
-                rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qInsert, parameters, useLinkQv: false);
+               // Add further queries for insertion if required
+
+                 rowsAffected = await DatabaseHelper.ExecuteNonQueryAsync(qInsert, parameters, useLinkQv: false);
 
                 Console.WriteLine($"Done Inserting queries effect row {rowsAffected}");
                 UpdateProgressLabel(progressLabel, $"Done Inserting queries effect row {rowsAffected}");
@@ -536,9 +691,9 @@ namespace WindowsFormsApp1
 
             string _inbatch = txtBatchList.Text.Trim();
             var _p0 = batchVerify(_inbatch);
-            if (!_p0.complete)
+            if (!_p0.Success)
             {
-                MessageBox.Show(_p0.error);
+                MessageBox.Show(_p0.Error);
                 return;
             }
             DialogResult _r2 = MessageBox.Show($"ต้องการที่จะลบ! Batch ผลิต ใช่หรือไม่", "Waring",
@@ -552,7 +707,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show(_p1.error);
                 return;
             }
-            MessageBox.Show("Delete Batch Completed");
+            MessageBox.Show($"Delete Batch {_inbatch} Completed");
 
         }
 
@@ -603,34 +758,34 @@ namespace WindowsFormsApp1
 
 
 
-        private (bool complete, string error, List<int> batch) batchVerify(string batchNo)
-        {
-            string _batchs = batchNo;
-            _batchs = _batchs.Substring(1, _batchs.Length - 2);
-            string[] _batch = _batchs.Split(',');
+        //private (bool complete, string error, List<int> batch) batchVerify(string batchNo)
+        //{
+        //    string _batchs = batchNo;
+        //    _batchs = _batchs.Substring(1, _batchs.Length - 2);
+        //    string[] _batch = _batchs.Split(',');
 
-            List<int> _batchNo = new List<int>();
-            foreach (string _b in _batch)
-            {
+        //    List<int> _batchNo = new List<int>();
+        //    foreach (string _b in _batch)
+        //    {
 
-                try
-                {
-                    int _bn = int.Parse(_b);
-                    if (_bn < 10000 || _bn > 999999)
-                    {
-                        return (false, "Batch Value should be in the between 10,000 and 999,999 ", _batchNo);
-                    }
+        //        try
+        //        {
+        //            int _bn = int.Parse(_b);
+        //            if (_bn < 10000 || _bn > 999999)
+        //            {
+        //                return (false, "Batch Value should be in the between 10,000 and 999,999 ", _batchNo);
+        //            }
 
-                    _batchNo.Add(_bn);
+        //            _batchNo.Add(_bn);
 
-                }
-                catch (Exception er)
-                {
-                    return (false, er.ToString(), _batchNo);
-                }
-            }
-            return (true, "", _batchNo);
-        }
+        //        }
+        //        catch (Exception er)
+        //        {
+        //            return (false, er.ToString(), _batchNo);
+        //        }
+        //    }
+        //    return (true, "", _batchNo);
+        //}
         public async Task<(List<int> batch, List<bool> feb2)> searchBatchInDbAsync(string inBatch, bool isFeb1)
         {
             // Split the input into individual batch numbers
@@ -684,9 +839,9 @@ namespace WindowsFormsApp1
                 string _cutStart = datePlanStart.Value.ToString("yyyy-MM-dd 00:00:00");
                 string _inbatch = txtBatchList.Text.Trim();
                 var _p0 = batchVerify(_inbatch);
-                if (!_p0.complete)
+                if (!_p0.Success)
                 {
-                    MessageBox.Show(_p0.error);
+                    MessageBox.Show(_p0.Error);
                     return;
                 }
                 DialogResult _r2 = MessageBox.Show($"ต้องการที่จะแก้ไขวันเริ่ม ใช่หรือไม่", "Waring",
@@ -770,9 +925,9 @@ namespace WindowsFormsApp1
 
             if (!string.IsNullOrEmpty(txtBatchList.Text))
             {
-                if (!_p0.complete)
+                if (!_p0.Success)
                 {
-                    MessageBox.Show(_p0.error);
+                    MessageBox.Show(_p0.Error);
                     return;
                 }
                 DialogResult _r2 = MessageBox.Show($"ต้องการที่จะแก้ไขวันส่งมอบ ใช่หรือไม่", "Warning",
@@ -881,6 +1036,18 @@ namespace WindowsFormsApp1
                 return;
             }
 
+            // ① parse & verify
+            var verify = batchVerify(batches);
+            if (!verify.Success)
+            {
+                MessageBox.Show(verify.Error);
+                progressBar1.Visible = false;
+                return;
+            }
+
+
+
+
             if (dataTable == "ProductionPlan")
             {
                 selectDataTable = "[LinkQV].[dbo].[ProductionPlan_Table]";
@@ -939,13 +1106,28 @@ namespace WindowsFormsApp1
 
         private void btn_Check_Click(object sender, EventArgs e)
         {
+            
 
             string Condition, q;
             Condition = cb_CuttingList.SelectedItem.ToString();
             string batches = txtBatchList.Text.Trim();
+            if (string.IsNullOrEmpty(Condition))
+            {
+                MessageBox.Show("Please select a condition from the dropdown.");
+                return;
+            }
             if (string.IsNullOrEmpty(batches))
             {
                 MessageBox.Show("txtBatchList is empty , fill up first");
+                return;
+            }
+
+            // ① parse & verify
+            var verify = batchVerify(batches);
+            if (!verify.Success)
+            {
+                MessageBox.Show(verify.Error);
+                progressBar1.Visible = false;
                 return;
             }
 
@@ -992,13 +1174,16 @@ namespace WindowsFormsApp1
                 Center.data_set = new DataSet();
                 Center.data_adpater.Fill(Center.data_set, "tblCuttingLists");
                 dataGridView1.DataSource = Center.data_set.Tables[0];
-
+                
 
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
+                
+            }
+            finally {
                 Center.closeConnection();
             }
 
@@ -1282,7 +1467,7 @@ namespace WindowsFormsApp1
 
                 if (result.Rows.Count == 0)
                 {
-                    MessageBox.Show("Error: No orders found.");
+                    MessageBox.Show("Error: No orders found. ไม่พบข้อมูลลูกค้า ");
                     return;
                 }
 
@@ -1353,7 +1538,7 @@ namespace WindowsFormsApp1
 
             }
 
-            MessageBox.Show($"OrderDetail updated successfully for orders: {string.Join(", ", orderBatchPairs.Select(o => o.OrderNumber))}");
+            MessageBox.Show($"OrderDetail updated successfully for orders ข้อมูลลูกค้า สมบูรณ์: {string.Join(", ", orderBatchPairs.Select(o => o.OrderNumber))}");
             MessageBox.Show($"Total rows inserted: {totalRowsInserted}");
             Center.Location = 3;
             // Hide the ProgressBar
@@ -1396,7 +1581,7 @@ namespace WindowsFormsApp1
                     FROM [ProductionPlan_Table]
                     WHERE Batch IN ({batchPlaceholders})
                     GROUP BY Batch, OrderNumber
-                    HAVING COUNT(*) > 1";
+                    HAVING COUNT(*) >= 1";
 
             List<(string OrderNumber, string Batch)> orderBatchPairs = new List<(string OrderNumber, string Batch)>();
 
@@ -1412,7 +1597,7 @@ namespace WindowsFormsApp1
 
                 if (result.Rows.Count == 0)
                 {
-                    MessageBox.Show("Error: No orders found.");
+                    MessageBox.Show("Error: No orders found LocationPrecut_1and2Async.");
                     return;
                 }
 
@@ -1425,7 +1610,7 @@ namespace WindowsFormsApp1
 
                 if (orderBatchPairs.Count == 0)
                 {
-                    MessageBox.Show("Error: No orders found.");
+                    MessageBox.Show("Error: No orders found LocationPrecut_1and2Async.");
                     return;
                 }
             }
@@ -1532,6 +1717,15 @@ namespace WindowsFormsApp1
 
             string batchNumber = txtBatchList.Text.Trim();
 
+            // ① parse & verify
+            var verify = batchVerify(batchNumber);
+            if (!verify.Success)
+            {
+                MessageBox.Show(verify.Error);
+                progressBar1.Visible = false;
+                return;
+            }
+
             // Parse and clean the input batch numbers
             var batchNumbers = batchNumber.Trim('(', ')').Split(',')
                                        .Select(b => b.Trim())
@@ -1616,7 +1810,14 @@ namespace WindowsFormsApp1
                 logMessage += $"\nException: {ex.Message}\nStackTrace: {ex.StackTrace}";
             }
             File.AppendAllText("log.txt", logMessage + Environment.NewLine);
-            MessageBox.Show(" logMessage" + Environment.NewLine);
+            // MessageBox.Show(" logMessage" + Environment.NewLine);
+            // ✅ show the actual details:
+            MessageBox.Show(
+                logMessage,
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
         }
     }
 }

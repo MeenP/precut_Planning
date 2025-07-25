@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>6634_calendar_date_event_plan_icon.ico</ApplicationIcon>
+    <ApplicationIcon>9320235_order_robot_interaction_untact_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
@@ -178,6 +178,7 @@
     <Content Include="6634_calendar_date_event_plan_icon.ico" />
     <Content Include="6643382_consistant_diet_exercise_fitness_plan_icon.ico" />
     <Content Include="8396425_schedule_calendar_date_time_plan_icon.ico" />
+    <Content Include="9320235_order_robot_interaction_untact_icon.ico" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

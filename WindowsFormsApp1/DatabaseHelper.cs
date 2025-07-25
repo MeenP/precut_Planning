@@ -41,6 +41,53 @@ namespace WindowsFormsApp1
             return result;
         }
 
+        //guaranteed all-or-nothing:
+        public static async Task<int> ExecuteNonQueryWithTransactionAsync(string query, Dictionary<string, object> parameters = null, bool useLinkQv = false)
+        {
+            if (useLinkQv)
+                await Task.Run(() => Center.openConnection_LinkQvDB());
+            else
+                await Task.Run(() => Center.openConnection_WindsorDB());
+
+            using (var transaction = Center.con.BeginTransaction())
+            using (var command = Center.con.CreateCommand())
+            {
+                command.Transaction = transaction;
+                command.CommandText = query;
+                command.CommandTimeout = 600;
+
+                if (parameters != null)
+                {
+                    foreach (var param in parameters)
+                    {
+                        command.Parameters.AddWithValue(param.Key, param.Value);
+                    }
+                }
+
+                try
+                {
+                    int result = await command.ExecuteNonQueryAsync();
+                    await Task.Run(() => transaction.Commit());
+                    //transaction.Commit();
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    await Task.Run(() => transaction.Rollback());
+                    //transaction.Rollback();
+                    Center.closeConnection();
+                    Logger.Log("Transaction failed", ex);
+                    throw; // rethrow to handle it outside if needed
+                }
+                finally
+                {
+                    Center.closeConnection();
+                }
+            }
+        }
+
+
+
         public static async Task<object> ExecuteScalarAsync(string query, Dictionary<string, object> parameters = null, bool useLinkQv = false)
         {
             SqlCommand command = await CreateCommandAsync(query, parameters, useLinkQv);

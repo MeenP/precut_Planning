@@ -557,8 +557,9 @@ C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFo
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.WorkingDate.resources
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.GenerateResource.cache
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CoreCompileInputs.cache
-C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlanningApp.csproj.CopyComplete
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\MetroFramework.dll
 C:\Users\meenu\Source\Repos\precut_Planning\WindowsFormsApp1\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\meenu\source\repos\precut_Planning\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
+C:\Users\meenu\source\repos\precut_Planning\WindowsFormsApp1\obj\Debug\NewPlann.06993213.Up2Date

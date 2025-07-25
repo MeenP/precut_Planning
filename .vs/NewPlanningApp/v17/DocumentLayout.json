@@ -1,0 +1,465 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productionplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productionplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|c:\\users\\meenu\\source\\repos\\precut_planning\\windowsformsapp1\\planningprecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\planningprecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\production_descriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\production_descriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\profileoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\profileoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\workingdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\workingdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\planningprecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\planningprecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\opt_cut_testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\opt_cut_testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\6634_calendar_date_event_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\6634_calendar_date_event_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\8396425_schedule_calendar_date_time_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\8396425_schedule_calendar_date_time_plan_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\9320235_order_robot_interaction_untact_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\9320235_order_robot_interaction_untact_icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|NewPlanningApp||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productionplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productionplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\center.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\center.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\planningprecut.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\planningprecut.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\planningprecut.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\planningprecut.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productioncapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productioncapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productionplanform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productionplanform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productioncapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productioncapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\production_descriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\production_descriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\opt_cut_testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\opt_cut_testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\datatransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\datatransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\listtodatatableconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\listtodatatableconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|C:\\Users\\meenu\\source\\repos\\precut_Planning\\windowsformsapp1\\planningprecut.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{D0EC2328-4470-4429-9EF3-FCE8D69A266B}|WindowsFormsApp1\\NewPlanningApp.csproj|solutionrelative:windowsformsapp1\\planningprecut.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 312,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlanningPrecut.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\PlanningPrecut.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\PlanningPrecut.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T02:13:11.655Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlanningPrecut.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\PlanningPrecut.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\PlanningPrecut.cs",
+              "ViewState": "AgIAANYFAAAAAAAAAAAYwO0FAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T01:44:25.731Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\App.config",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\App.config",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\App.config",
+              "RelativeToolTip": "WindowsFormsApp1\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-02T02:29:34.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NewPlanningApp",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\NewPlanningApp.csproj",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\NewPlanningApp.csproj",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\NewPlanningApp.csproj",
+              "RelativeToolTip": "WindowsFormsApp1\\NewPlanningApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-09T09:00:44.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductionplanForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductionplanForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductionplanForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T02:04:13.041Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Production_DescriptionForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Production_DescriptionForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Production_DescriptionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:59:02.008Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WorkingDate.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\WorkingDate.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\WorkingDate.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\WorkingDate.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\WorkingDate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:08:05.612Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfileOperationForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProfileOperationForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProfileOperationForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProfileOperationForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\ProfileOperationForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:08:07.529Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "9320235_order_robot_interaction_untact_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\9320235_order_robot_interaction_untact_icon.ico",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\9320235_order_robot_interaction_untact_icon.ico",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\9320235_order_robot_interaction_untact_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "RelativeToolTip": "WindowsFormsApp1\\9320235_order_robot_interaction_untact_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-07-23T07:03:24.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "8396425_schedule_calendar_date_time_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\8396425_schedule_calendar_date_time_plan_icon.ico",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\8396425_schedule_calendar_date_time_plan_icon.ico",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\8396425_schedule_calendar_date_time_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "RelativeToolTip": "WindowsFormsApp1\\8396425_schedule_calendar_date_time_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-07-23T07:03:24.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Opt_cut_testForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Opt_cut_testForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Opt_cut_testForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T02:56:02.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "6643382_consistant_diet_exercise_fitness_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "RelativeToolTip": "WindowsFormsApp1\\6643382_consistant_diet_exercise_fitness_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-07-23T07:03:25.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "6634_calendar_date_event_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\6634_calendar_date_event_plan_icon.ico",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\6634_calendar_date_event_plan_icon.ico",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\6634_calendar_date_event_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "RelativeToolTip": "WindowsFormsApp1\\6634_calendar_date_event_plan_icon.ico - Icon [256x256, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-07-23T07:03:26.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductionplanForm.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductionplanForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductionplanForm.cs",
+              "ViewState": "AgIAAO4BAAAAAAAAAAA8wA0CAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T02:04:16.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Center.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Center.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Center.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Center.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Center.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAF4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T01:53:06.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PlanningPrecut.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\PlanningPrecut.Designer.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\PlanningPrecut.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T02:21:18.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Program.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T02:46:20.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\DatabaseHelper.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\DatabaseHelper.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAhwGYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:53:11.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlanningPrecut.resx",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.resx",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\PlanningPrecut.resx",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.resx",
+              "RelativeToolTip": "WindowsFormsApp1\\PlanningPrecut.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-07-23T02:21:14.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductioncapForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductioncapForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductioncapForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductioncapForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductioncapForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:58:59.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductionplanForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductionplanForm.Designer.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductionplanForm.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductionplanForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T02:20:25.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductioncapForm.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductioncapForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductioncapForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductioncapForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductioncapForm.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T08:13:34.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Production_DescriptionForm.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Production_DescriptionForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T08:13:27.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Opt_cut_testForm.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Opt_cut_testForm.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAWwFAAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T02:56:08.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DataTransfer.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\DataTransfer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\DataTransfer.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\DataTransfer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\DataTransfer.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAiwEMAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:14:00.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProductDescription.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductDescription.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductDescription.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ProductDescription.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductDescription.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T08:13:23.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ListtoDataTableConverter.cs",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ListtoDataTableConverter.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ListtoDataTableConverter.cs",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\ListtoDataTableConverter.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ListtoDataTableConverter.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:14:03.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PlanningPrecut.resx",
+              "DocumentMoniker": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.resx",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\PlanningPrecut.resx",
+              "ToolTip": "C:\\Users\\meenu\\source\\repos\\precut_Planning\\WindowsFormsApp1\\PlanningPrecut.resx",
+              "RelativeToolTip": "WindowsFormsApp1\\PlanningPrecut.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-12-02T12:35:44.97Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
